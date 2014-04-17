@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds. -->
+
+<device name="Android">
+    <item name="none">0</item>
+    <item name="screen.on">58</item>
+    <item name="bluetooth.active">98</item>
+    <item name="bluetooth.on">0.4</item>
+    <item name="screen.full">228</item>
+    <item name="wifi.on">0.5</item>
+    <item name="wifi.active">187</item>
+    <item name="wifi.scan">114</item>
+    <item name="dsp.audio">40</item>
+    <item name="dsp.video">251</item>
+    <item name="radio.active">155</item>
+    <item name="radio.scanning">25</item>
+    <item name="gps.on">0.3</item>
+    <array name="radio.on">
+        <value>5.4</value>
+        <value>5.4</value>
+    </array>
+    <array name="cpu.speeds">
+        <value>2265600</value>
+        <value>1782000</value>
+        <value>1497600</value>
+        <value>1190400</value>
+        <value>960000</value>
+        <value>729600</value>
+        <value>422400</value>
+        <value>300000</value>
+    </array>
+    <item name="cpu.idle">4</item>
+    <array name="cpu.active">
+        <value>399</value>
+        <value>308</value>
+        <value>264</value>
+        <value>190</value>
+        <value>174</value>
+        <value>102</value>
+        <value>72</value>
+        <value>46</value>
+    </array>
+    <item name="battery.capacity">3200</item>
+</device>
