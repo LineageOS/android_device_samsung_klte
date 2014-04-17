@@ -42,7 +42,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x00000100
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/hlte/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/klte/mkbootimg.mk
 
 # Graphics
 BOARD_EGL_CFG := device/samsung/klte/egl.cfg
@@ -124,7 +124,7 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 # Assert
 TARGET_OTA_ASSERT_DEVICE := kltexx,kltespr,kltetmo,kltecan,klteatt,kltevzw,klte
 
-TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_klte_eur_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_eur_defconfig
 
 # PowerHAL
 TARGET_POWERHAL_VARIANT := qcom
