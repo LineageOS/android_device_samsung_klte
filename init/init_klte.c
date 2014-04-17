@@ -69,11 +69,11 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.device", "kltespr");
         property_set("ro.telephony.ril.v3", "newDriverCallU,newDialCode");
     } else if (strstr(bootloader, "G900T")) {
-        /* hltetmo */
-        property_set("ro.build.fingerprint", "samsung/hltetmo/hltetmo:4.3/JSS15J/N900TUVUBMI7:user/release-keys");
-        property_set("ro.build.description", "hltetmo-user 4.3 JSS15J N900TUVUBMI7 release-keys");
+        /* kltetmo */
+        property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:4.4.2/KOT49H/G900TUVU1ANCH:user/release-keys");
+        property_set("ro.build.description", "kltetmo-user 4.4.2 KOT49H G900TUVU1ANCH release-keys");
         property_set("ro.product.model", "SM-G900T");
-        property_set("ro.product.device", "hltetmo");
+        property_set("ro.product.device", "kltetmo");
         property_set("ro.telephony.ril.v3", "newDialCode");
     } else if (strstr(bootloader, "G900V")) {
         /* hltevzw */
