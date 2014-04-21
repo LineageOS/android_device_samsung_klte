@@ -4,38 +4,58 @@
 # This is a common source of Android security bugs.
 #
 
+on early-boot
+    chown bluetooth net_bt_stack /dev/ttyHS0
+    chmod 0660 /dev/ttyHS0
+
+# permissions for Multiverse
+    chown system system /sys/class/sec/Multiverse/Brane
+    chmod 0600 /sys/class/sec/Multiverse/Brane
+
+# efs
+    chmod 0660 /dev/block/mmcblk0p12
+    chown system system /dev/block/mmcblk0p12
+
+on init
+#Private Mode
+    mkdir /mnt/shell/privatemode 0700 system system
+    mkdir /storage/Private 0000 system system
+
+on post-fs-data
+#Private Mode
+    mkdir /data/privatemode 0770 system system
+    chown system system /data/privatemode
+    restorecon /data/privatemode
+
+# SSWAP
+    write /proc/sys/vm/swappiness 130
+
+## mount carreir partition for SPR model ##
+on init
+    mkdir /carrier 0771 system system
+
+on fs
+    wait /dev/block/platform/msm_sdcc.1/by-name/carrier
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/carrier /carrier nosuid nodev barrier=1
+    chown system system /carrier
+    chmod 0771 /carrier
+    restorecon -R /carrier
+
 on boot
 # permission for Input Device(Touchkey).
-    chmod 0660 /sys/class/input/input2/enabled
-    chown system system /sys/class/input/input2/enabled
+    chmod 0660 /sys/class/input/input1/enabled
+    chown system system /sys/class/input/input1/enabled
     chown radio system /sys/class/sec/sec_touchkey/touch_sensitivity
     chown radio system /sys/class/sec/sec_touchkey/touchkey_firm_update
     chown system radio /sys/class/sec/sec_touchkey/glove_mode
     chown system radio /sys/class/sec/sec_touchkey/flip_mode
     chown system radio /sys/class/sec/sec_touchkey/boost_level
 
-# permission for Input Device(Wacom).
-    chmod 0660 /sys/class/input/input4/enabled
-    chown system system /sys/class/input/input4/enabled
-
-# permissions for S-Pen
-    chmod 0660 /sys/class/input/input3/enabled
-    chown system system /sys/class/input/input3/enabled
-    chown system radio /sys/class/sec/sec_epen/epen_firm_update
-    chown system radio /sys/class/sec/sec_epen/epen_rotation
-    chown system radio /sys/class/sec/sec_epen/epen_hand
-    chown system radio /sys/class/sec/sec_epen/epen_reset
-    chown system radio /sys/class/sec/sec_epen/epen_reset_result
-    chown system radio /sys/class/sec/sec_epen/epen_checksum
-    chown system radio /sys/class/sec/sec_epen/epen_checksum_result
-    chown system radio /sys/class/sec/sec_epen/epen_saving_mode
-    chown system radio /sys/class/sec/sec_epen/boost_level
-
 # permissions for bluetooth.
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
     chown bluetooth net_bt_stack ro.bt.bdaddr_path
-    chown bluetooth net_bt_stack /dev/ttyHS0
-    chmod 0660 /dev/ttyHS0
+    chown radio net_bt_stack /efs/bluetooth/bt_addr
+    chmod 0640 /efs/bluetooth/bt_addr
     chmod 0660 /sys/class/rfkill/rfkill0/state
     chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
     chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
@@ -48,35 +68,48 @@ on boot
     chmod 0600 /dev/btlock
     chown bluetooth bluetooth /dev/btlock
 
-on fs
+# permission for Expander.
+    chown system system /sys/class/sec/expander/expgpio
 
-# Support Preload install apks
-    mkdir /preload 0771 system system
-
-#For Absolute Persistence Partition
-
-     mkdir /persdata 0755 system system
-     mkdir /persdata/absolute 0750 system system
-
-     wait /dev/block/platform/msm_sdcc.1/by-name/persdata
-     check_fs /dev/block/platform/msm_sdcc.1/by-name/persdata ext4
-     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persdata /persdata/absolute nosuid nodev barrier=1
-
-     chown system system /persdata
-     chmod 0755 /persdata
-     chown system system /persdata/absolute
-     chmod 0750 /persdata/absolute
+# permission for mDNIe
+    chown system system /sys/class/mdnie/mdnie/sensorRGB
 
 # bluetooth dhcp config
-service dhcpcd_bt-pan /system/bin/dhcpcd -ABKL
-    class main
- disabled
- oneshot
 
-service iprenew_bt-pan /system/bin/dhcpcd -n
+# Fingerprint
+    mkdir /dev/validity 0770 system system
+
+# SENSOR FRAMEWORK : starts fingerprintService
+service vcsFPService /system/bin/vcsFPService
     class late_start
- disabled
- oneshot
+    user system
+    group system
+
+on fs
+  
+#For Absolute Persistence Partition 
+       
+    mkdir /persdata 0755 system system 
+    mkdir /persdata/absolute 0750 system system 
+  
+    wait /dev/block/platform/msm_sdcc.1/by-name/persdata 
+    check_fs /dev/block/platform/msm_sdcc.1/by-name/persdata ext4 
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persdata /persdata/absolute nosuid nodev barrier=1 
+      
+    chown system system /persdata 
+    chmod 0755 /persdata 
+    chown system system /persdata/absolute 
+    chmod 0750 /persdata/absolute
+
+# bootchecker
+service bootchecker /system/bin/bootchecker
+    class late_start
+    user system
+    group system log
+    oneshot
+
+
+# TODO: replace it with device's DEXPREOPT_BOOT_JARS
 
 # service for TZPR provisioning version check app
 service scranton_RD /system/bin/scranton_RD
@@ -88,3 +121,32 @@ service scranton_RD /system/bin/scranton_RD
 # start for TZPR provisioning version check app
 on property:sys.qseecomd.enable=true
     start scranton_RD
+
+    mkdir /efs/drm/playready 0775
+    chown drm system /efs/drm/playready
+    chmod 0775 /efs/drm/playready
+
+#Private Mode
+service privatemode /system/bin/sdcard /data/privatemode /mnt/shell/privatemode 1000 1000
+    class late_start
+    oneshot
+
+#InsideSecure VPN Client
+service vpnclientpm /system/bin/vpnclientpm -u 1000 -g 1000 \
+     -O /data/data/com.ipsec.service/vpnclientpm.txt \
+     -U rmnet,rmnet_usb,wlan,bt-pan,rndis,p2p,eth
+      socket vpnclientpm seqpacket 0600 system system
+      disabled
+on property:service.vpnclientpm.enable=1
+      start vpnclientpm
+on property:service.vpnclientpm.enable=0
+      stop vpnclientpm
+
+# SSWAP
+service swapon /sbin/sswap -s
+    class core
+    user root
+    group root
+    seclabel u:r:sswap:s0
+    oneshot
+
