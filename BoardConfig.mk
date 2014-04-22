@@ -35,7 +35,6 @@ TARGET_KERNEL_SOURCE := kernel/samsung/klte
 TARGET_KERNEL_CONFIG := msm8974_sec_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_spr_defconfig
-
 # Kernel
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
 BOARD_KERNEL_BASE := 0x00000000
@@ -79,11 +78,11 @@ BOARD_HAVE_NEW_QCOM_CSDCLIENT := true
 
 # QCOM support
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_QCOM_MEDIA_VARIANT := caf-new
-TARGET_QCOM_DISPLAY_VARIANT := caf-new
+TARGET_QCOM_MEDIA_VARIANT := caf
+TARGET_QCOM_DISPLAY_VARIANT := caf
 BOARD_USES_LEGACY_ALSA_AUDIO := 
 TARGET_QCOM_AUDIO_VARIANT := caf-
-#TARGET_USES_QCOM_BSP := true
+TARGET_USES_QCOM_BSP := true
 
 # Audio settings
 BOARD_USES_CUSTOM_AUDIO_PLATFORM_PATH := device/samsung/klte/audio/platform
