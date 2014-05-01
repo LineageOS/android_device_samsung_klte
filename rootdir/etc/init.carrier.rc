@@ -1,45 +1,8 @@
-# Copyright (C) 2012 The Android Open Source Project
+`# Copyright (C) 2012 The Android Open Source Project
 #
 # IMPORTANT: Do not create world writable files or directories.
 # This is a common source of Android security bugs.
 #
-
-on early-boot
-    chown bluetooth net_bt_stack /dev/ttyHS0
-    chmod 0660 /dev/ttyHS0
-
-# permissions for Multiverse
-    chown system system /sys/class/sec/Multiverse/Brane
-    chmod 0600 /sys/class/sec/Multiverse/Brane
-
-# efs
-    chmod 0660 /dev/block/mmcblk0p12
-    chown system system /dev/block/mmcblk0p12
-
-on init
-#Private Mode
-    mkdir /mnt/shell/privatemode 0700 system system
-    mkdir /storage/Private 0000 system system
-
-on post-fs-data
-#Private Mode
-    mkdir /data/privatemode 0770 system system
-    chown system system /data/privatemode
-    restorecon /data/privatemode
-
-# SSWAP
-    write /proc/sys/vm/swappiness 130
-
-## mount carreir partition for SPR model ##
-on init
-    mkdir /carrier 0771 system system
-
-on fs
-    wait /dev/block/platform/msm_sdcc.1/by-name/carrier
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/carrier /carrier nosuid nodev barrier=1
-    chown system system /carrier
-    chmod 0771 /carrier
-    restorecon -R /carrier
 
 on boot
 # permission for Input Device(Touchkey).
@@ -68,48 +31,35 @@ on boot
     chmod 0600 /dev/btlock
     chown bluetooth bluetooth /dev/btlock
 
-# permission for Expander.
-    chown system system /sys/class/sec/expander/expgpio
+on fs
 
-# permission for mDNIe
-    chown system system /sys/class/mdnie/mdnie/sensorRGB
+# Support Preload install apks
+    mkdir /preload 0771 system system
+
+#For Absolute Persistence Partition
+
+     mkdir /persdata 0755 system system
+     mkdir /persdata/absolute 0750 system system
+
+     wait /dev/block/platform/msm_sdcc.1/by-name/persdata
+     check_fs /dev/block/platform/msm_sdcc.1/by-name/persdata ext4
+     mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persdata /persdata/absolute nosuid nodev barrier=1
+
+     chown system system /persdata
+     chmod 0755 /persdata
+     chown system system /persdata/absolute
+     chmod 0750 /persdata/absolute
 
 # bluetooth dhcp config
+service dhcpcd_bt-pan /system/bin/dhcpcd -ABKL
+    class main
+ disabled
+ oneshot
 
-# Fingerprint
-    mkdir /dev/validity 0770 system system
-
-# SENSOR FRAMEWORK : starts fingerprintService
-service vcsFPService /system/bin/vcsFPService
+service iprenew_bt-pan /system/bin/dhcpcd -n
     class late_start
-    user system
-    group system
-
-on fs
-  
-#For Absolute Persistence Partition 
-       
-    mkdir /persdata 0755 system system 
-    mkdir /persdata/absolute 0750 system system 
-  
-    wait /dev/block/platform/msm_sdcc.1/by-name/persdata 
-    check_fs /dev/block/platform/msm_sdcc.1/by-name/persdata ext4 
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/persdata /persdata/absolute nosuid nodev barrier=1 
-      
-    chown system system /persdata 
-    chmod 0755 /persdata 
-    chown system system /persdata/absolute 
-    chmod 0750 /persdata/absolute
-
-# bootchecker
-service bootchecker /system/bin/bootchecker
-    class late_start
-    user system
-    group system log
-    oneshot
-
-
-# TODO: replace it with device's DEXPREOPT_BOOT_JARS
+ disabled
+ oneshot
 
 # service for TZPR provisioning version check app
 service scranton_RD /system/bin/scranton_RD
@@ -121,32 +71,3 @@ service scranton_RD /system/bin/scranton_RD
 # start for TZPR provisioning version check app
 on property:sys.qseecomd.enable=true
     start scranton_RD
-
-    mkdir /efs/drm/playready 0775
-    chown drm system /efs/drm/playready
-    chmod 0775 /efs/drm/playready
-
-#Private Mode
-service privatemode /system/bin/sdcard /data/privatemode /mnt/shell/privatemode 1000 1000
-    class late_start
-    oneshot
-
-#InsideSecure VPN Client
-service vpnclientpm /system/bin/vpnclientpm -u 1000 -g 1000 \
-     -O /data/data/com.ipsec.service/vpnclientpm.txt \
-     -U rmnet,rmnet_usb,wlan,bt-pan,rndis,p2p,eth
-      socket vpnclientpm seqpacket 0600 system system
-      disabled
-on property:service.vpnclientpm.enable=1
-      start vpnclientpm
-on property:service.vpnclientpm.enable=0
-      stop vpnclientpm
-
-# SSWAP
-service swapon /sbin/sswap -s
-    class core
-    user root
-    group root
-    seclabel u:r:sswap:s0
-    oneshot
-
