@@ -86,12 +86,17 @@ PRODUCT_PACKAGES += \
     initlogo.rle \
     init.bt.rc \
     init.carrier.rc \
-    init.crda.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.ril.rc \
     init.target.rc \
     ueventd.qcom.rc
+
+# System init scripts
+PRODUCT_PACKAGES += \
+    init.crda.sh \
+    init.sec.boot.sh
+
 # HAL
 PRODUCT_PACKAGES += \
     copybit.msm8974 \

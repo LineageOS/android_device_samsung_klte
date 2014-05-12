@@ -105,6 +105,10 @@ on boot
     # for BT MAC address
     mkdir /efs/bluetooth 0775 radio system
 
+    # For WiFi
+    chown wifi wifi /dev/rfkill
+    chmod 0600 /dev/rfkill
+
     #Audience ES705 UART
     chmod 0660 /dev/ttyHS3
     chown system system /dev/ttyHS3
