@@ -215,10 +215,6 @@ PRODUCT_COPY_FILES += \
    device/samsung/klte/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
    device/samsung/klte/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    keystore.msm8974
-
 # call common msm8960
 $(call inherit-product, device/samsung/msm8960-common/msm8960.mk)
 
