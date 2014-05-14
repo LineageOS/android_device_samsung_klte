@@ -77,8 +77,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.telephony.ril.v3", "newDialCode");
     } else if (strstr(bootloader, "G900V")) {
         /* hltevzw */
-        property_set("ro.build.fingerprint", "Verizon/hltevzw/hltevzw:4.3/JSS15J/N900VOYUBMJ3:user/release-keys");
-        property_set("ro.build.description", "hltevzw-user 4.3 JSS15J N900VOYUBMJ3 release-keys");
+        property_set("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:4.4.2/KOT49H/G900VVRU1ANCG:user/release-keys");
+        property_set("ro.build.description", "kltevzw-user 4.4.2 KOT49H G900VVRU1ANCG release-keys");
         property_set("ro.product.model", "SM-G900V");
         property_set("ro.product.device", "hltevzw");
         property_set("ro.telephony.ril.v3", "newDriverCallU,newDialCode");
@@ -86,11 +86,11 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.cdma.home.operator.alpha", "Verizon");
         property_set("ro.cdma.home.operator.numeric", "311480");
     } else {
-        /* hltexx */
-        property_set("ro.build.fingerprint", "samsung/hltexx/hlte:4.3/JSS15J/N9005XXUBMH1:user/release-keys");
-        property_set("ro.build.description", "hltexx-user 4.3 JSS15J N9005XXUBMH1 release-keys");
-        property_set("ro.product.model", "SM-G9005");
-        property_set("ro.product.device", "hltexx");
+        /* kltexx */
+        property_set("ro.build.fingerprint", "samsung/kltexx/klte:4.4.2/KOT49H/G900FXXU1ANCE:user/release-keys");
+        property_set("ro.build.description", "kltexx-user 4.4.2 KOT49H G900FXXU1ANCE release-keys");
+        property_set("ro.product.model", "SM-G900F");
+        property_set("ro.product.device", "kltexx");
         property_set("ro.telephony.ril.v3", "newDialCode");
     }
     property_get("ro.product.device", device);
