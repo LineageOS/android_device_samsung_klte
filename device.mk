@@ -103,7 +103,8 @@ PRODUCT_PACKAGES += \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
     memtrack.msm8974 \
-    power.msm8974
+    power.msm8974 \
+    camera.msm8974
 
 # Audio
 PRODUCT_PACKAGES += \
