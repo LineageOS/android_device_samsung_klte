@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-"""Custom OTA commands for hlte devices"""
+"""Custom OTA commands for klte devices"""
 
 def FullOTA_InstallEnd(info):
   info.script.AppendExtra('ifelse(is_substring("G900T", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/gsm/* /system/lib/"));')
