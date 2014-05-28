@@ -4,27 +4,27 @@
 	<!-- K LTE SPR ================================================ -->
 	<!-- These are the initial mixer settings -->
 	<!-- reset RX part -->
-	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia1" value="ZERO" />
-	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia2" value="ZERO" />
-	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia3" value="ZERO" />
-	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia4" value="ZERO" />
-	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia5" value="ZERO" />
-	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia10" value="ZERO" />
+	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia1" value="0" />
+	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia2" value="0" />
+	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia3" value="0" />
+	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia4" value="0" />
+	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia5" value="0" />
+	<ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia10" value="0" />
 
-	<ctl name="SLIMBUS_0_RX Port Mixer SLIM_0_TX" value="ZERO" />
+	<ctl name="SLIMBUS_0_RX Port Mixer SLIM_0_TX" value="0" />
 
-	<ctl name="AUX_PCM_RX Audio Mixer MultiMedia1" value="ZERO" />
-	<ctl name="AUX_PCM_RX Audio Mixer MultiMedia4" value="ZERO" />
-	<ctl name="AUX_PCM_RX Audio Mixer MultiMedia5" value="ZERO" />
+	<ctl name="AUX_PCM_RX Audio Mixer MultiMedia1" value="0" />
+	<ctl name="AUX_PCM_RX Audio Mixer MultiMedia4" value="0" />
+	<ctl name="AUX_PCM_RX Audio Mixer MultiMedia5" value="0" />
 
-	<ctl name="HDMI Mixer MultiMedia1" value="ZERO" />
-	<ctl name="HDMI Mixer MultiMedia2" value="ZERO" />
+	<ctl name="HDMI Mixer MultiMedia1" value="0" />
+	<ctl name="HDMI Mixer MultiMedia2" value="0" />
 
-	<ctl name="SLIM_0_RX_Voice Mixer CSVoice" value="ZERO" />
-	<ctl name="SLIM_0_RX_Voice Mixer Voip" value="ZERO" />
+	<ctl name="SLIM_0_RX_Voice Mixer CSVoice" value="0" />
+	<ctl name="SLIM_0_RX_Voice Mixer Voip" value="0" />
 
-	<ctl name="AUX_PCM_RX_Voice Mixer CSVoice" value="ZERO" />
-	<ctl name="AUX_PCM_RX_Voice Mixer Voip" value="ZERO" />
+	<ctl name="AUX_PCM_RX_Voice Mixer CSVoice" value="0" />
+	<ctl name="AUX_PCM_RX_Voice Mixer Voip" value="0" />
 
 	<ctl name="SLIM RX1 MUX" value="ZERO" />
 	<ctl name="SLIM RX2 MUX" value="ZERO" />
@@ -56,50 +56,50 @@
 	<ctl name="RX1 MIX1 INP2" value="ZERO" />
 	<ctl name="RX1 MIX1 INP1" value="ZERO" />
 
-	<ctl name="RX1 Digital Volume" value="ZERO" />
-	<ctl name="RX2 Digital Volume" value="ZERO" />
-	<ctl name="RX3 Digital Volume" value="ZERO" />
-	<ctl name="RX4 Digital Volume" value="ZERO" />
-	<ctl name="RX5 Digital Volume" value="ZERO" />
-	<ctl name="RX6 Digital Volume" value="ZERO" />
-	<ctl name="RX7 Digital Volume" value="ZERO" />
+	<ctl name="RX1 Digital Volume" value="0" />
+	<ctl name="RX2 Digital Volume" value="0" />
+	<ctl name="RX3 Digital Volume" value="0" />
+	<ctl name="RX4 Digital Volume" value="0" />
+	<ctl name="RX5 Digital Volume" value="0" />
+	<ctl name="RX6 Digital Volume" value="0" />
+	<ctl name="RX7 Digital Volume" value="0" />
 
-	<ctl name="HPHL DAC Switch" value="ZERO" />
-	<ctl name="HPHL Volume" value="ZERO" />
-	<ctl name="HPHR Volume" value="ZERO" />
+	<ctl name="HPHL DAC Switch" value="0" />
+	<ctl name="HPHL Volume" value="0" />
+	<ctl name="HPHR Volume" value="0" />
 
-	<ctl name="LINEOUT1 Volume" value="ZERO" />
-	<ctl name="LINEOUT2 Volume" value="ZERO" />
-	<ctl name="LINEOUT3 Volume" value="ZERO" />
-	<ctl name="LINEOUT4 Volume" value="ZERO" />
+	<ctl name="LINEOUT1 Volume" value="0" />
+	<ctl name="LINEOUT2 Volume" value="0" />
+	<ctl name="LINEOUT3 Volume" value="0" />
+	<ctl name="LINEOUT4 Volume" value="0" />
 	
-	<ctl name="SPK DRV Volume" value="ZERO" />
+	<ctl name="SPK DRV Volume" value="0" />
 
 	<ctl name="EAR PA Gain" value="POS_0_DB" />
 	
-	<ctl name="DAC1 Switch" value="ZERO" />
+	<ctl name="DAC1 Switch" value="0" />
 
-	<ctl name="COMP0 Switch" value="ZERO" />
-	<ctl name="COMP1 Switch" value="ZERO" />
-	<ctl name="COMP2 Switch" value="ZERO" />
+	<ctl name="COMP0 Switch" value="0" />
+	<ctl name="COMP1 Switch" value="0" />
+	<ctl name="COMP2 Switch" value="0" />
 
 	<ctl name="CLASS_H_DSM MUX" value="ZERO" />
 
 	<!-- reset TX part -->
-	<ctl name="MultiMedia5 Mixer SLIM_0_TX" value="ZERO" />
-	<ctl name="MultiMedia5 Mixer AFE_PCM_TX" value="ZERO" />
-	<ctl name="MultiMedia1 Mixer MI2S_TX" value="ZERO" />
-	<ctl name="MultiMedia1 Mixer SLIM_0_TX" value="ZERO" />
-	<ctl name="MultiMedia1 Mixer SLIM_4_TX" value="ZERO" />
-	<ctl name="MultiMedia1 Mixer AUX_PCM_UL_TX" value="ZERO" />
-	<ctl name="MultiMedia1 Mixer VOC_REC_UL" value="ZERO" />
-	<ctl name="MultiMedia1 Mixer VOC_REC_DL" value="ZERO" />
+	<ctl name="MultiMedia5 Mixer SLIM_0_TX" value="0" />
+	<ctl name="MultiMedia5 Mixer AFE_PCM_TX" value="0" />
+	<ctl name="MultiMedia1 Mixer MI2S_TX" value="0" />
+	<ctl name="MultiMedia1 Mixer SLIM_0_TX" value="0" />
+	<ctl name="MultiMedia1 Mixer SLIM_4_TX" value="0" />
+	<ctl name="MultiMedia1 Mixer AUX_PCM_UL_TX" value="0" />
+	<ctl name="MultiMedia1 Mixer VOC_REC_UL" value="0" />
+	<ctl name="MultiMedia1 Mixer VOC_REC_DL" value="0" />
 
-	<ctl name="Voice_Tx Mixer SLIM_0_TX_Voice" value="ZERO" />
-	<ctl name="Voice_Tx Mixer AUX_PCM_TX_Voice" value="ZERO" />
+	<ctl name="Voice_Tx Mixer SLIM_0_TX_Voice" value="0" />
+	<ctl name="Voice_Tx Mixer AUX_PCM_TX_Voice" value="0" />
 
-	<ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="ZERO" />
-	<ctl name="Voip_Tx Mixer AUX_PCM_TX_Voip" value="ZERO" />
+	<ctl name="Voip_Tx Mixer SLIM_0_TX_Voip" value="0" />
+	<ctl name="Voip_Tx Mixer AUX_PCM_TX_Voip" value="0" />
 
 	<ctl name="SLIM TX10 MUX" value="ZERO" />
 	<ctl name="SLIM TX9 MUX" value="ZERO" />
@@ -127,40 +127,38 @@
 
 	<ctl name="SLIM RX1 MUX" value="AIF1_PB" />
 	<ctl name="SLIM RX2 MUX" value="ZERO" />
-	<ctl name="AIF1_CAP Mixer SLIM TX7" value="ZERO" />
-	<ctl name="AIF1_CAP Mixer SLIM TX8" value="ZERO" />
-	<ctl name="AIF1_CAP Mixer SLIM TX9" value="ZERO" />
+	<ctl name="AIF1_CAP Mixer SLIM TX7" value="0" />
+	<ctl name="AIF1_CAP Mixer SLIM TX8" value="0" />
+	<ctl name="AIF1_CAP Mixer SLIM TX9" value="0" />
 
-	<ctl name="ADC1 Volume" value="ZERO" />
-	<ctl name="ADC2 Volume" value="ZERO" />
-	<ctl name="ADC3 Volume" value="ZERO" />
-	<ctl name="ADC4 Volume" value="ZERO" />
-	<ctl name="ADC5 Volume" value="ZERO" />
-	<ctl name="ADC6 Volume" value="ZERO" />
+	<ctl name="ADC1 Volume" value="0" />
+	<ctl name="ADC2 Volume" value="0" />
+	<ctl name="ADC3 Volume" value="0" />
+	<ctl name="ADC4 Volume" value="0" />
+	<ctl name="ADC5 Volume" value="0" />
+	<ctl name="ADC6 Volume" value="0" />
 
-	<ctl name="DEC1 Volume" value="ZERO" />
-	<ctl name="DEC2 Volume" value="ZERO" />
-	<ctl name="DEC3 Volume" value="ZERO" />
-	<ctl name="DEC4 Volume" value="ZERO" />
-	<ctl name="DEC5 Volume" value="ZERO" />
-	<ctl name="DEC6 Volume" value="ZERO" />
-	<ctl name="DEC7 Volume" value="ZERO" />
-	<ctl name="DEC8 Volume" value="ZERO" />
-	<ctl name="DEC9 Volume" value="ZERO" />
-	<ctl name="DEC10 Volume" value="ZERO" />
+	<ctl name="DEC1 Volume" value="0" />
+	<ctl name="DEC2 Volume" value="0" />
+	<ctl name="DEC3 Volume" value="0" />
+	<ctl name="DEC4 Volume" value="0" />
+	<ctl name="DEC5 Volume" value="0" />
+	<ctl name="DEC6 Volume" value="0" />
+	<ctl name="DEC7 Volume" value="0" />
+	<ctl name="DEC8 Volume" value="0" />
+	<ctl name="DEC9 Volume" value="0" />
+	<ctl name="DEC10 Volume" value="0" />
 
 	<ctl name="TX3 HPF cut off" value="MIN_3DB_4Hz" />
 	<ctl name="TX4 HPF cut off" value="MIN_3DB_4Hz" />
 	<ctl name="TX5 HPF cut off" value="MIN_3DB_4Hz" />
 
-	<ctl name="ES705 TX1 Enable" value="ZERO" />
-	<ctl name="ES705 RX1 Enable" value="ZERO" />
-	<ctl name="ES705 RX2 Enable" value="ZERO" />
-	<ctl name="ES325 RX1 Enable" value="ZERO" />
-	<ctl name="ES325 RX2 Enable" value="ZERO" />
+	<ctl name="ES705 TX1 Enable" value="0" />
+	<ctl name="ES705 RX1 Enable" value="0" />
+	<ctl name="ES705 RX2 Enable" value="0" />
 	<ctl name="ES705-AP Tx Channels" value="One" />
-	<ctl name="ES705 Voice Wakeup Enable" value="ZERO" />
-	<ctl name="ES705 Voice LPM Enable" value="ZERO" />
+	<ctl name="ES705 Voice Wakeup Enable" value="0" />
+	<ctl name="ES705 Voice LPM Enable" value="0" />
 	<ctl name="Internal Route Config" value="5" />
 
 	<ctl name="TTY Mode" value="OFF" />
@@ -480,8 +478,8 @@
 
 	<path name="speaker-and-headphones">
 		<path name="spk-ear" />
-		<ctl name="HPHL Volume" value="ZERO" />
-		<ctl name="HPHR Volume" value="ZERO" />
+		<ctl name="HPHL Volume" value="0" />
+		<ctl name="HPHR Volume" value="0" />
 		<ctl name="RX1 Digital Volume" value="81" />
 		<ctl name="RX2 Digital Volume" value="81" />
 		<ctl name="RX7 Digital Volume" value="80" />
@@ -709,25 +707,24 @@
 	<!-- Voice call Scenario -->
 	<!-- RX part -->
 	<path name="voice-call-handset">
+		<ctl name="ES705 RX1 Enable" value="1" />
 		<path name="rcv" />
 		<ctl name="EAR PA Gain" value="POS_6_DB" />
 		<ctl name="RX1 Digital Volume" value="84" />
-		<ctl name="ES325 RX1 Enable" value="1" />
 	</path>
 
 	<path name="voice-call-handset-extra-vol">
+		<ctl name="ES705 RX1 Enable" value="1" />
 		<path name="rcv" />
 		<ctl name="EAR PA Gain" value="POS_6_DB" />
 		<ctl name="RX1 Digital Volume" value="84" />
-		<ctl name="ES325 RX1 Enable" value="1" />
-		<ctl name="VEQ Enable" value="ZERO" />
 	</path>
 
 	<path name="voice-call-handset-hac">
 		<path name="rcv" />
 		<ctl name="EAR PA Gain" value="POS_6_DB" />
 		<ctl name="RX1 Digital Volume" value="84" />
-		<ctl name="ES325 RX1 Enable" value="1" />
+		<ctl name="ES705 RX1 Enable" value="1" />
 	</path>
 
 	<path name="voice-call-speaker">
@@ -752,7 +749,7 @@
 	</path>
 
 	<path name="voice-call-dock">
-		<ctl name="ES325 RX1 Enable" value="1" />
+		<ctl name="ES705 RX1 Enable" value="1" />
 		<path name="lineout" />
 		<ctl name="SLIM_0_RX Channels" value="Two" />
 		<ctl name="LINEOUT1 Volume" value="19" />
@@ -760,7 +757,7 @@
 	</path>
 
 	<path name="voice-call-handset-emergency">
-		<ctl name="ES325 RX1 Enable" value="1" />
+		<ctl name="ES705 RX1 Enable" value="1" />
 		<path name="rcv" />
 		<ctl name="EAR PA Gain" value="POS_6_DB" />
 		<ctl name="RX1 Digital Volume" value="84" />
@@ -774,8 +771,12 @@
 	</path>
 	<!-- TX part -->
 	<path name="voice-call-main-mic">
-		<path name="main-mic" />
-		<ctl name="DEC2 Volume" value="95" />
+		<ctl name="ES705 TX1 Enable" value="1" />
+		<path name="main-sub-mic" />
+		<ctl name="DEC2 Volume" value="96" />
+		<ctl name="DEC4 Volume" value="96" />
+		<ctl name="ES705-AP Tx Channels" value="One" />
+		<ctl name="Internal Route Config" value="4" />
 	</path>
 
 	<path name="voice-call-sub-mic">
@@ -800,8 +801,11 @@
 	</path>
 
 	<path name="voice-call-NS-mic-handset">
-		<path name="main-mic" />
-		<ctl name="DEC2 Volume" value="95" />
+		<ctl name="ES705 TX1 Enable" value="1" />
+		<path name="main-sub-mic" />
+		<ctl name="DEC2 Volume" value="96" />
+		<ctl name="DEC4 Volume" value="96" />
+		<ctl name="ES705-AP Tx Channels" value="One" />
 		<ctl name="Internal Route Config" value="2" />
 	</path>
 
@@ -816,7 +820,7 @@
 		<path name="main-sub-mic" />
 		<ctl name="DEC2 Volume" value="96" />
 		<ctl name="DEC4 Volume" value="96" />
-		<ctl name="ES705-AP Tx Channels" value="Two" />
+		<ctl name="ES705-AP Tx Channels" value="One" />
 		<ctl name="Internal Route Config" value="4" />
 	</path>
 
@@ -835,7 +839,7 @@
 		<ctl name="RX1 MIX1 INP1" value="RX1" />
 		<ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
 		<ctl name="EAR PA Gain" value="POS_6_DB" />
-		<ctl name="RX1 Digital Volume" value="ZERO" />
+		<ctl name="RX1 Digital Volume" value="0" />
 	</path>
 	
 	<path name="voice-call-forward-mic">
@@ -843,7 +847,7 @@
 		<ctl name="SLIM_0_TX Channels" value="One" />
 		<ctl name="SLIM TX7 MUX" value="DEC6" />
 		<ctl name="DEC6 MUX" value="ADC1" />
-		<ctl name="DEC6 Volume" value="ZERO" />
+		<ctl name="DEC6 Volume" value="0" />
 	</path>
 	<!-- end of call forward Scenario -->
 
@@ -897,7 +901,7 @@
 	<!-- TX part -->
 	<path name="video-call-main-mic">
 		<ctl name="ES705 TX1 Enable" value="1" />
-		<path name="main-mic" />
+		<path name="main-sub-mic" />
 		<ctl name="DEC2 Volume" value="96" />
 		<ctl name="DEC4 Volume" value="96" />
 		<ctl name="ES705-AP Tx Channels" value="One" />
@@ -915,7 +919,7 @@
 		<path name="main-mic" />
 		<ctl name="DEC2 Volume" value="96" />
 		<ctl name="ES705-AP Tx Channels" value="One" />
-		<ctl name="Internal Route Config" value="ZERO" />
+		<ctl name="Internal Route Config" value="0" />
 	</path>
 
 	<path name="video-call-headset-mic">
@@ -924,7 +928,7 @@
 		<ctl name="ADC2 Volume" value="12" />
 		<ctl name="DEC5 Volume" value="84" />
 		<ctl name="ES705-AP Tx Channels" value="One" />
-		<ctl name="Internal Route Config" value="ZERO" />
+		<ctl name="Internal Route Config" value="0" />
 	</path>
 
 	<path name="video-call-NS-mic-handset">
@@ -1016,7 +1020,7 @@
 		<path name="main-mic" />
 		<ctl name="DEC2 Volume" value="96" />
 		<ctl name="ES705-AP Tx Channels" value="One" />
-		<ctl name="Internal Route Config" value="ZERO" />
+		<ctl name="Internal Route Config" value="0" />
 	</path>
 
 	<path name="VoLTE-voice-headset-mic">
@@ -1029,7 +1033,7 @@
 		<ctl name="RX2 MIX2 INP1" value="IIR1" />
 		<ctl name="IIR1 INP1 Volume" value="60" />
 		<ctl name="ES705-AP Tx Channels" value="One" />
-		<ctl name="Internal Route Config" value="ZERO" />
+		<ctl name="Internal Route Config" value="0" />
 	</path>
 
 	<path name="VoLTE-voice-NS-mic-handset">
@@ -1115,7 +1119,7 @@
 		<path name="main-mic" />
 		<ctl name="DEC2 Volume" value="96" />
 		<ctl name="ES705-AP Tx Channels" value="One" />
-		<ctl name="Internal Route Config" value="ZERO" />
+		<ctl name="Internal Route Config" value="0" />
 	</path>
 
 	<path name="VoLTE-video-headset-mic">
@@ -1124,7 +1128,7 @@
 		<ctl name="ADC2 Volume" value="12" />
 		<ctl name="DEC5 Volume" value="84" />
 		<ctl name="ES705-AP Tx Channels" value="One" />
-		<ctl name="Internal Route Config" value="ZERO" />
+		<ctl name="Internal Route Config" value="0" />
 	</path>
 
 	<path name="VoLTE-video-NS-mic-handset">
@@ -1207,7 +1211,7 @@
 		<ctl name="ADC2 Volume" value="12" />
 		<ctl name="DEC5 Volume" value="84" />
 		<ctl name="ES705-AP Tx Channels" value="One" />
-		<ctl name="Internal Route Config" value="ZERO" />
+		<ctl name="Internal Route Config" value="0" />
 		<ctl name="TTY Mode" value="FULL" />
 	</path>
 	<!-- end of TTY Scenario -->

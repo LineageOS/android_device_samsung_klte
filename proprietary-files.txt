@@ -34,6 +34,10 @@ vendor/lib/libaudcal.so
 vendor/lib/libcsd-client.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
+lib/libmysound.so
+lib/libaudiosa.so
+lib/soundfx/libaudioeffectoffload.so
+lib/soundfx/libaudiosa_sec.so
 etc/Bluetooth_cal.acdb
 etc/General_cal.acdb
 etc/Handset_cal.acdb
@@ -133,18 +137,10 @@ vendor/lib/libOmxWmaDec.so
 bin/mm-qcamera-daemon
 cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
-<<<<<<< HEAD
 etc/C16QL_s5k2p2xx_module_info.xml
 etc/F16QS_imx240_module_info.xml
 etc/F16QL_s5k2p2xx_module_info.xml
 lib/hw/camera.msm8974.so
-=======
-etc/C13QL_s5k3l2xx_module_info.xml
-etc/C13QS_imx135_module_info.xml
-etc/D13QL_s5k3l2xx_module_info.xml
-etc/D13QS_imx135_module_info.xml
-lib/hw/camera.msm8974.so:lib/hw/camera.vendor.msm8974.so
->>>>>>> 1048fcb... HLTE:  Use camera wrapper.
 lib/libTsAe.so
 lib/libTsAf.so
 lib/libTs_J_Accm.so
@@ -239,6 +235,7 @@ lib/libvdis.so
 vendor/lib/libthermalclient.so
 vendor/lib/libmmcamera_imx240.so
 vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
 vendor/lib/libsensor1.so
 vendor/lib/libmmcamera2_stats_modules.so
 vendor/lib/libmmcamera_image_stab.so
