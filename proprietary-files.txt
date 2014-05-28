@@ -249,6 +249,8 @@ vendor/lib/libmmcamera2_imglib_modules.so
 vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera2_wnr_module.so
 vendor/lib/libmmcamera2_vpe_module.so
+vendor/lib/libmmcamera2_companion_s5k2p2xx.so
+vendor/lib/libmmcamera2_companion_imx240.so
 vendor/lib/libadsprpc.so
 vendor/lib/C16QL_libchromatix_s5k2p2xx_common.so
 vendor/lib/C16QL_libchromatix_s5k2p2xx_common_res0.so
