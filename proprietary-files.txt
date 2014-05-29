@@ -30,12 +30,15 @@ vendor/lib/liblocationservice.so
 # Audio
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbloader.so:lib/libacdbloader.so
+vendor/lib/libacdbmapper.so
 vendor/lib/libaudcal.so
 vendor/lib/libcsd-client.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 lib/libmysound.so
 lib/libaudiosa.so
+lib/libsoundalive.so
+lib/lib_soundaliveresampler.so
 lib/soundfx/libaudioeffectoffload.so
 lib/soundfx/libaudiosa_sec.so
 etc/Bluetooth_cal.acdb
