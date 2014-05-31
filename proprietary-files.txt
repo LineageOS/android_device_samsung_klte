@@ -131,7 +131,7 @@ lib/hw/sensorhubs.msm8974.so
 # Unsorted
 vendor/lib/libmmQSM.so
 vendor/lib/libmmQTA.so
-vendor/lib/libmmhtppstack.so
+vendor/lib/libmmhttpstack.so
 vendor/lib/libmmiipstreammmihttp.so
 vendor/lib/libmmipstreamaal.so
 vendor/lib/libmmipstreamnetwork.so
