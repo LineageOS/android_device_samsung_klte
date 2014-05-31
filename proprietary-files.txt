@@ -3,7 +3,6 @@ bin/hvdcp
 bin/mpdecision
 bin/radish
 bin/rfs_access
-bin/mm-gesture-daemon
 #bin/prepare_param.sh
 
 # Thermal
