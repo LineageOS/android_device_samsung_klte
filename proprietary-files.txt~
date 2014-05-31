@@ -40,9 +40,8 @@ lib/libmysound.so
 lib/libaudiosa.so
 lib/libsoundalive.so
 lib/lib_soundaliveresampler.so
-lib/libaudio-ril.so
-lib/libwebrtc_audio_coding.so
-lib/libwebrtc_audio_preprocessing.so
+lib/soundfx/libaudioeffectoffload.so
+lib/soundfx/libaudiosa_sec.so
 etc/Bluetooth_cal.acdb
 etc/General_cal.acdb
 etc/Handset_cal.acdb
@@ -50,8 +49,6 @@ etc/Global_cal.acdb
 etc/Hdmi_cal.acdb
 etc/Headset_cal.acdb
 etc/Speaker_cal.acdb
-etc/Diag_audio.cfg
-
 
 # Adreno GPU
 vendor/lib/egl/eglsubAndroid.so
@@ -63,7 +60,6 @@ vendor/lib/libadreno_utils.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d30-a3xx.so
 vendor/lib/libc2d30.so
-vendor/lib/libc2d2_z180.so
 vendor/lib/libCB.so
 vendor/lib/libgsl.so
 vendor/lib/libOpenVG.so
@@ -79,12 +75,10 @@ etc/firmware/a330_pm4.fw
 # Graphics
 vendor/lib/libmm-color-convertor.so
 
-lib/libsec-ril.so
-lib/libril.so
-#lib/cdma/libsec-ril.so
-#lib/cdma/libril.so
-#lib/gsm/libsec-ril.so
-#lib/gsm/libril.so
+lib/cdma/libsec-ril.so
+lib/cdma/libril.so
+lib/gsm/libsec-ril.so
+lib/gsm/libril.so
 #lib/libsensirion_h_2.so
 lib/hw/sensors.msm8974.so
 
@@ -129,21 +123,6 @@ bin/time_daemon
 # Sensors
 lib/hw/sensorhubs.msm8974.so
 
-# Unsorted
-vendor/lib/libmmQSM.so
-vendor/lib/libmmQTA.so
-vendor/lib/libmmhtppstack.so
-vendor/lib/libmmiipstreammmihttp.so
-vendor/lib/libmmipstreamaal.so
-vendor/lib/libmmipstreamnetwork.so
-vendor/lib/libmmipstreamsourcehttp.so
-vendor/lib/libmmipstreamutils.so
-vendor/lib/libmmrtpencoder.so
-vendor/lib/libmmrtpdecoder.so
-vendor/lib/libmmwfdinterface.so
-vendor/lib/libmmwfdsinkinterface.so
-vendor/lib/libmmwfdsrcinterface.so
-
 # Media
 lib/libOmxVdecHevc.so
 vendor/lib/libDivxDrm.so
@@ -157,7 +136,6 @@ vendor/lib/libOmxAmrwbplusDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxWmaDec.so
-vendor/lib/libmm-hdcpmgr.so
 
 # Camera
 bin/mm-qcamera-daemon
@@ -176,7 +154,6 @@ lib/libqomx_core.so
 lib/libqomx_jpegenc.so
 lib/libliveframework.so
 lib/libarcsoft_nighthawk.so
-lib/libarccamera.so
 lib/C16QL_libchromatix_s5k2p2xx_default_video.so
 lib/C16QL_libchromatix_s5k2p2xx_golfshot.so
 lib/C16QL_libchromatix_s5k2p2xx_hdr_liveshot.so
@@ -249,7 +226,6 @@ lib/F16QS_libTsAe.so
 lib/F16QS_libTsAf.so
 lib/F16QS_libTs_J_Accm.so
 lib/F16QS_libTs_J_Awb.so
-lib/libmmipl.so
 lib/libmmcamera2_stats_algorithm.so
 lib/libmmcamera_cac3_lib.so
 lib/libmmcamera_fidelix_eeprom.so
@@ -314,7 +290,6 @@ vendor/lib/libchromatix_s5k8b1yx_snapshot.so
 vendor/lib/libchromatix_s5k8b1yx_vt_beauty.so
 vendor/lib/libchromatix_s5k8b1yx_smart_stay.so
 vendor/lib/liboemcamera.so
-vendor/lib/lib-imscamera.so
 
 # Wi-Fi
 etc/wifi/bcmdhd_apsta.bin
