@@ -44,7 +44,6 @@ on fs
     setprop ro.crypto.fuse_sdcard true
 
     exec /system/bin/sh /init.qcom.syspart_fixup.sh ${ro.board.platform} ${ro.serialno}
-    exec /system/bin/sh /init.qcom.audio.sh
 
     # Keeping following partitions outside fstab file. As user may not have
     # these partition flashed on the device. Failure to mount any partition in fstab file
