@@ -28,6 +28,9 @@
 # the DIAG device node is not world writable/readable.
 /dev/diag                 0660   system     qcom_diag
 
+# vibrator
+/dev/tspdrv               0660   system     system
+
 /dev/genlock              0666   system     system
 /dev/kgsl                 0666   system     system
 /dev/kgsl-3d0             0666   system     system

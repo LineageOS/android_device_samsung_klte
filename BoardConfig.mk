@@ -100,6 +100,9 @@ TARGET_PROVIDES_CAMERA_HAL :=
 # Build lights 
 TARGET_PROVIDES_LIBLIGHT := true
 
+# vibrator
+BOARD_HAS_VIBRATOR_IMPLEMENTATION := ../../device/samsung/klte/vibrator/tspdrv.c
+
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
 

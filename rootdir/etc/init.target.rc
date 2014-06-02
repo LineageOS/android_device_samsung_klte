@@ -632,8 +632,6 @@ on boot
     mkdir /data/misc/radio/hatp 0775 radio system
 
     # Vibetonz
-    chmod 0660 /dev/tspdrv
-    chown root shell /dev/tspdrv
 	chown system system /sys/class/timed_output/vibrator/pwm_value
 	chmod 0660 /sys/class/timed_output/vibrator/pwm_value
     chown system system /sys/class/timed_output/vibrator/pwm_max
