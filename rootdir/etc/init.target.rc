@@ -509,19 +509,14 @@ on boot
     chown system radio /sys/class/sensors/hrm_sensor/vendor
 # SensorHub
     chown system radio /sys/class/sensors/ssp_sensor/enable
-    chown system radio /sys/class/sensors/ssp_sensor/enable_irq
     chown system radio /sys/class/sensors/ssp_sensor/mcu_rev
     chown system radio /sys/class/sensors/ssp_sensor/mcu_name
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_dump
     chown system radio /sys/class/sensors/ssp_sensor/mcu_test
     chown system radio /sys/class/sensors/ssp_sensor/mcu_reset
     chown system radio /sys/class/sensors/ssp_sensor/mcu_update
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_update2
-    chown system radio /sys/class/sensors/ssp_sensor/mcu_update_ums
     chown system radio /sys/class/sensors/ssp_sensor/mcu_sleep_test
     chown system radio /sys/class/sensors/ssp_sensor/ori_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/mag_poll_delay
-    chown system radio /sys/class/sensors/ssp_sensor/pressure_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/temp_humi_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/accel_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/rot_poll_delay
@@ -531,33 +526,6 @@ on boot
     chown system radio /sys/class/sensors/ssp_sensor/ssp_flush
     chmod 0600 /dev/batch_io
     chown system system /dev/batch_io
-    chmod 0600 /dev/ssp_sensorhub
-    chown system system /dev/ssp_sensorhub
-# IIO devices for SensorHub
-    chmod 0600 /dev/iio:device0
-    chown system system /dev/iio:device0
-    chmod 0600 /dev/iio:device1
-    chown system system /dev/iio:device1
-    chmod 0600 /dev/iio:device2
-    chown system system /dev/iio:device2
-    chmod 0600 /dev/iio:device3
-    chown system system /dev/iio:device3
-    chmod 0600 /dev/iio:device4
-    chown system system /dev/iio:device4
-    chmod 0600 /dev/iio:device5
-    chown system system /dev/iio:device5
-    chown system system /sys/bus/iio/devices/iio:device0/buffer/length
-    chown system system /sys/bus/iio/devices/iio:device0/buffer/enable
-    chown system system /sys/bus/iio/devices/iio:device1/buffer/length
-    chown system system /sys/bus/iio/devices/iio:device1/buffer/enable
-    chown system system /sys/bus/iio/devices/iio:device2/buffer/length
-    chown system system /sys/bus/iio/devices/iio:device2/buffer/enable
-    chown system system /sys/bus/iio/devices/iio:device3/buffer/length
-    chown system system /sys/bus/iio/devices/iio:device3/buffer/enable
-    chown system system /sys/bus/iio/devices/iio:device4/buffer/length
-    chown system system /sys/bus/iio/devices/iio:device4/buffer/enable
-    chown system system /sys/bus/iio/devices/iio:device5/buffer/length
-    chown system system /sys/bus/iio/devices/iio:device5/buffer/enable
 # Gesture_sensor
     chown system radio /sys/class/sensors/gesture_sensor/vendor
     chown system radio /sys/class/sensors/gesture_sensor/name
