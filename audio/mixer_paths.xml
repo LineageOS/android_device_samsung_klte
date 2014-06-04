@@ -156,6 +156,8 @@
 	<ctl name="ES705 TX1 Enable" value="ZERO" />
 	<ctl name="ES705 RX1 Enable" value="ZERO" />
 	<ctl name="ES705 RX2 Enable" value="ZERO" />
+	<ctl name="ES325 RX1 Enable" value="ZERO" />
+	<ctl name="ES325 RX2 Enable" value="ZERO" />
 	<ctl name="ES705-AP Tx Channels" value="One" />
 	<ctl name="ES705 Voice Wakeup Enable" value="ZERO" />
 	<ctl name="ES705 Voice LPM Enable" value="ZERO" />
@@ -710,14 +712,14 @@
 		<path name="rcv" />
 		<ctl name="EAR PA Gain" value="POS_6_DB" />
 		<ctl name="RX1 Digital Volume" value="84" />
-		<ctl name="ES705 RX1 Enable" value="1" />
+		<ctl name="ES325 RX1 Enable" value="1" />
 	</path>
 
 	<path name="voice-call-handset-extra-vol">
 		<path name="rcv" />
 		<ctl name="EAR PA Gain" value="POS_6_DB" />
 		<ctl name="RX1 Digital Volume" value="84" />
-		<ctl name="ES705 RX1 Enable" value="1" />
+		<ctl name="ES325 RX1 Enable" value="1" />
 		<ctl name="VEQ Enable" value="ZERO" />
 	</path>
 
@@ -725,7 +727,7 @@
 		<path name="rcv" />
 		<ctl name="EAR PA Gain" value="POS_6_DB" />
 		<ctl name="RX1 Digital Volume" value="84" />
-		<ctl name="ES705 RX1 Enable" value="1" />
+		<ctl name="ES325 RX1 Enable" value="1" />
 	</path>
 
 	<path name="voice-call-speaker">
@@ -750,7 +752,7 @@
 	</path>
 
 	<path name="voice-call-dock">
-		<ctl name="ES705 RX1 Enable" value="1" />
+		<ctl name="ES325 RX1 Enable" value="1" />
 		<path name="lineout" />
 		<ctl name="SLIM_0_RX Channels" value="Two" />
 		<ctl name="LINEOUT1 Volume" value="19" />
@@ -758,7 +760,7 @@
 	</path>
 
 	<path name="voice-call-handset-emergency">
-		<ctl name="ES705 RX1 Enable" value="1" />
+		<ctl name="ES325 RX1 Enable" value="1" />
 		<path name="rcv" />
 		<ctl name="EAR PA Gain" value="POS_6_DB" />
 		<ctl name="RX1 Digital Volume" value="84" />
