@@ -8,8 +8,8 @@
     "target_path": "device/samsung/qcom-common"
   },
   {
-    "repository": "android_device_samsung_msm8974-common",
-    "target_path": "device/samsung/msm8974-common"
+    "repository": "android_device_samsung_msm8960-common",
+    "target_path": "device/samsung/msm8960-common"
   },
   {
     "repository": "android_device_samsung_klte",

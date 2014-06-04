@@ -97,9 +97,24 @@ PRODUCT_PACKAGES += \
     init.crda.sh \
     init.sec.boot.sh
 
+# HAL
+PRODUCT_PACKAGES += \
+    copybit.msm8974 \
+    gralloc.msm8974 \
+    hwcomposer.msm8974 \
+    memtrack.msm8974 \
+    power.msm8974 \
+    camera.msm8974
+
 # Audio
 PRODUCT_PACKAGES += \
     audiod \
+    audio.a2dp.default \
+    audio_policy.msm8974 \
+    audio.primary.msm8974 \
+    audio.r_submix.default \
+    audio.usb.default \
+    libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     tinymix
@@ -206,8 +221,8 @@ PRODUCT_COPY_FILES += \
    device/samsung/klte/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
    device/samsung/klte/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf
 
-# call common msm8974
-$(call inherit-product, device/samsung/msm8974-common/msm8974.mk)
+# call common msm8960
+$(call inherit-product, device/samsung/msm8960-common/msm8960.mk)
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
