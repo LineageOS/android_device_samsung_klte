@@ -1,7 +1,4 @@
 rild.libargs=-d /dev/smd0
-telephony.lteOnCdmaDevice=1
-ro.telephony.default_network=10
-persist.radio.mode_pref_nv10=1
 
 ro.qc.sdk.izat.premium_enabled=0
 ro.qc.sdk.izat.service_mask=0x0
