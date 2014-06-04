@@ -20,14 +20,12 @@
 # definition file).
 #
 
-# inherit from common msm8960
--include device/samsung/msm8960-common/BoardConfigCommon.mk
+# inherit from common msm8974
+-include device/samsung/msm8974-common/BoardConfigCommon.mk
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/klte/include
 
-# overrides  msm8960
-TARGET_BOARD_PLATFORM := msm8974
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
+# Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 
 # Kernel Configs
@@ -76,26 +74,11 @@ BOARD_NFC_HAL_SUFFIX := msm8974
 # Samsung's nonstandard csd-client
 BOARD_HAVE_NEW_QCOM_CSDCLIENT := true
 
-# QCOM support
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_QCOM_MEDIA_VARIANT := caf-new
-TARGET_QCOM_DISPLAY_VARIANT := caf-new
-BOARD_USES_LEGACY_ALSA_AUDIO := 
-TARGET_QCOM_AUDIO_VARIANT := caf
-TARGET_USES_QCOM_BSP := true
-
 # Audio settings
 BOARD_USES_CUSTOM_AUDIO_PLATFORM_PATH := device/samsung/klte/audio/platform
 AUDIO_FEATURE_DISABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_DISABLED_FM := true
 AUDIO_FEATURE_DISABLED_ANC_HEADSET := true
-
-WIFI_DRIVER_FW_PATH_P2P     := 
-
-# Don't use qcom camera HAL
-#USE_DEVICE_SPECIFIC_CAMERA := true
-TARGET_PROVIDES_CAMERA_HAL_MSM8974 := true
-TARGET_PROVIDES_CAMERA_HAL := 
 
 # Build lights 
 TARGET_PROVIDES_LIBLIGHT := true
@@ -127,9 +110,6 @@ TARGET_OTA_ASSERT_DEVICE := kltexx,kltespr,kltetmo,kltecan,klteatt,kltevzw,klte
 # PowerHAL
 TARGET_POWERHAL_VARIANT := qcom
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/samsung/klte/power/power_ext.c
-
-# The "new" GPS is really the old GPS, override it.
-BOARD_HAVE_NEW_QC_GPS :=
 
 # We don't use old-ass RPC
 TARGET_NO_RPC := true
