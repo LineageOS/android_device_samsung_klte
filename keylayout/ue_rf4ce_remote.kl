@@ -65,4 +65,4 @@ key 402   CHANNEL_UP     WAKE
 key 403   CHANNEL_DOWN   WAKE
 key 110   STB_INPUT             WAKE
 key 28   ENTER          WAKE	#OK
-key 139   MENU           WAKE
+key 254   MENU           WAKE

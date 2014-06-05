@@ -52,7 +52,7 @@ key 30   PROG_RED      WAKE
 key 48   PROG_GREEN    WAKE
 key 46   PROG_YELLOW   WAKE
 key 32   PROG_BLUE     WAKE
-key 139   MENU         WAKE
+key 254   MENU         WAKE
 key 116   POWER        WAKE
 key 168	  MEDIA_REWIND WAKE
 key 119   MEDIA_PAUSE  WAKE
