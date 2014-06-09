@@ -67,6 +67,13 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.model", "SM-G900P");
         property_set("ro.product.device", "kltespr");
         cdma_properties();
+    } else if (strstr(bootloader, "G900R4")) {
+        /* kltespr */
+        property_set("ro.build.fingerprint", "samsung/klteusc/klteusc:4.4.2/KOT49H/G900R4VXU1ANCF:user/release-keys");
+        property_set("ro.build.description", "klteusc-user 4.4.2 KOT49H G900R4VXU1ANCF release-keys");
+        property_set("ro.product.model", "SM-G900R4");
+        property_set("ro.product.device", "klteusc");
+        cdma_properties();
     } else if (strstr(bootloader, "G900T")) {
         /* kltetmo */
         property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:4.4.2/KOT49H/G900TUVU1ANCH:user/release-keys");
