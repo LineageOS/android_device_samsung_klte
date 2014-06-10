@@ -88,6 +88,13 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.model", "SM-G900I");
         property_set("ro.product.device", "kltedv");
 	gsm_properties();
+    } else if (strstr(bootloader, "G900M")) {
+        /* klteub */
+        property_set("ro.build.fingerprint", "samsung/klteub/klte:4.4.2/KOT49H/G900MUBU1ANCE:user/release-keys");
+        property_set("ro.build.description", "klteub-user 4.4.2 KOT49H G900MUBU1ANCE release-keys");
+        property_set("ro.product.model", "SM-G900M");
+        property_set("ro.product.device", "klteub");
+	gsm_properties();
     } else if (strstr(bootloader, "G900V")) {
         /* hltevzw */
         property_set("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:4.4.2/KOT49H/G900VVRU1ANCG:user/release-keys");

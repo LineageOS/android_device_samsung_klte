@@ -102,7 +102,7 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := kltexx,kltespr,kltetmo,kltecan,klteatt,kltevzw,klteusc,kltedv,klte
+TARGET_OTA_ASSERT_DEVICE := kltexx,kltespr,kltetmo,kltecan,klteatt,kltevzw,klteusc,kltedv,klteub,klte
 
 # PowerHAL
 TARGET_POWERHAL_VARIANT := qcom
