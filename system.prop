@@ -2,7 +2,7 @@ rild.libargs=-d /dev/smd0
 
 ro.qc.sdk.izat.premium_enabled=0
 ro.qc.sdk.izat.service_mask=0x0
-persist.gps.qc_nlp_in_use=1
+persist.gps.qc_nlp_in_use=0
 ro.gps.agps_provider=1
 ro.qualcomm.cabl=1
 ro.hdcp2.rx=tz
@@ -10,7 +10,7 @@ ro.secwvk=144
 debug.sensors=1
 
 # Audio configuration
-ro.qc.sdk.audio.fluencetype=none
+ro.qc.sdk.audio.fluencetype=fluence
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
@@ -20,21 +20,3 @@ qcom.hw.aac.encoder=true
 
 # System property for number of mQANElements
 ro.ril.telephony.mqanelements=6
-
-# VIDC: debug_levels
-# 1:ERROR 2:HIGH 4:LOW 0:NOLOGS 7:AllLOGS
-vidc.debug.level=7
-ro.qc.sdk.audio.ssr=false
-ro.qc.sdk.sensors.gestures=true
-ro.qc.sdk.gestures.camera=false
-ro.qc.sdk.camera.facialproc=false
-#property to enable user to access Google WFD settings.
-persist.debug.wfd.enable=1
-#property to choose between virtual/external wfd display
-persist.sys.wfd.virtual=0
-tunnel.audio.encode = true
-#use VERY_HIGH_QUALITY for audio resampler
-af.resampler.quality=4
-# set wakeup status and svoice status
-persist.audio.voice_wakeup=0
-
