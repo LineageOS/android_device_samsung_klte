@@ -102,12 +102,19 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.model", "SM-G900A");
         property_set("ro.product.device", "klteatt");
 	gsm_properties();
+    } else if (strstr(bootloader, "G900R6")) {
+        /* kltelra */
+        property_set("ro.build.fingerprint", "samsung/kltelra/kltelra:4.4.2/KOT49H/G900R6WWU2AND7:user/release-keys");
+        property_set("ro.build.description", "kltelra-user 4.4.2 KOT49H G900R6WWU2AND7 release-keys");
+        property_set("ro.product.model", "SM-G900R6");
+        property_set("ro.product.device", "kltelra");
+        cdma_properties();
     } else if (strstr(bootloader, "G900R7")) {
         /* klteacg */
         property_set("ro.build.fingerprint", "samsung/klteacg/klteacg:4.4.2/KOT49H/G900R7WWU2AND8:user/release-keys");
         property_set("ro.build.description", "klteacg-user 4.4.2 KOT49H G900R7WWU2AND8 release-keys");
-        property_set("ro.product.model", "SM-G900P");
-        property_set("ro.product.device", "kltespr");
+        property_set("ro.product.model", "SM-G900R7");
+        property_set("ro.product.device", "klteacg");
         cdma_properties();
     } else if (strstr(bootloader, "G900V")) {
         /* hltevzw */
