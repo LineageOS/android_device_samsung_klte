@@ -99,6 +99,7 @@ void custom_init_data(){
     change_table_data(SND_DEVICE_IN_SPEAKER_DMIC_AEC, "voice-call-sub-mic");
     change_table_data(SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS, "voice-call-sub-mic");
     change_table_data(SND_DEVICE_IN_HEADSET_MIC, "rec-headset-mic");
+    change_table_data(SND_DEVICE_IN_HEADSET_MIC_FLUENCE, "rec-main-mic");
     change_table_data(SND_DEVICE_IN_VOICE_SPEAKER_MIC, "voice-call-sub-mic");
     change_table_data(SND_DEVICE_IN_VOICE_HEADSET_MIC, "voice-call-headset-mic");
     change_table_data(SND_DEVICE_IN_CAMCORDER_MIC, "rec-stereo-mic");
@@ -108,6 +109,7 @@ void custom_init_data(){
     change_table_data(SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC, "TTY-vco-mic");
     change_table_data(SND_DEVICE_IN_VOICE_TTY_HCO_HEADSET_MIC, "TTY-headset-mic");
     change_table_data(SND_DEVICE_IN_VOICE_REC_MIC, "vr-main-mic");
+    change_table_data(SND_DEVICE_IN_VOICE_REC_HEADSET_MIC, "vr-headset-mic");
     change_table_data(SND_DEVICE_IN_VOICE_REC_MIC_NS, "svoice-NS-mic");
     change_table_data(SND_DEVICE_IN_VOICE_REC_DMIC_STEREO, "vr-sub-mic");
     change_table_data(SND_DEVICE_IN_HANDSET_STEREO_DMIC, "rec-stereo-mic");
