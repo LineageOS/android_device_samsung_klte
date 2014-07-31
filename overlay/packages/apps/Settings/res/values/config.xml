@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 The CyanogenMod Project
+<!-- Copyright (C) 2014 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,6 +15,10 @@
 -->
 
 <resources>
+    <!-- Home button Wake support. Some devices do not support this.
+         Setting to false will disable Home button Wake support -->
+    <bool name="config_show_homeWake">true</bool>
+
     <!-- Volume Rocker Wake -->
     <bool name="config_show_volumeRockerWake">true</bool>
 </resources>

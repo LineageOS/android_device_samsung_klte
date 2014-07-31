@@ -67,17 +67,11 @@ on init
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
-       # Allow subsystem (modem etc) debugging
+    # Allow subsystem (modem etc) debugging
     write /sys/module/subsystem_restart/parameters/enable_debug ${persist.sys.ssr.enable_debug}
     write /sys/kernel/boot_adsp/boot 1
-    # exec /system/bin/sh /init.qcom.early_boot.sh ${ro.board.platform}
-    # exec /system/bin/sh /init.qcom.syspart_fixup.sh ${ro.board.platform} ${ro.serialno}
-
-on boot-pause
-    exec system/bin/battery_charging
 
 on boot
-
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -344,24 +338,12 @@ on post-fs-data
     # Gpio DVS
     chown radio system /sys/class/secgpio_check/secgpio_check_all/secgpio_ctrl
 
-    #write /sys/devices/system/cpu/cpu0/online 1
-    #write /sys/devices/system/cpu/cpu1/online 1
-    #write /sys/devices/system/cpu/cpu2/online 1
-    #write /sys/devices/system/cpu/cpu3/online 1
 
-# Export GPIO56 for fusion targets to enable/disable hub
-service usbhub_init /system/bin/usbhub_init
-   class late_start
-   user root
-   disabled
-   oneshot
+# Services begin here
 
 on property:init.svc.surfaceflinger=stopped
     stop ppd
     stop hdmid
-
-on property:ro.board.platform=msm7630_fusion
-    start usbhub_init
 
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
@@ -370,21 +352,7 @@ on property:init.svc.p2p_supplicant=stopped
     stop dhcpcd
 
 on property:bluetooth.isEnabled=true
-    start btwlancoex
     write /sys/class/bluetooth/hci0/idle_timeout 7000
-
-service qcom-c_core-sh /system/bin/sh /init.qcom.class_core.sh
-    class core
-    user root
-    oneshot
-
-service qcom-c_main-sh /system/bin/sh /init.qcom.class_main.sh
-    class main
-    user root
-    oneshot
-
-on property:vold.decrypt=trigger_restart_framework
-    start qcom-c_main-sh
 
 service cnd /system/bin/cnd
     class late_start
@@ -399,27 +367,9 @@ service rmt_storage /system/bin/rmt_storage
 on property:ro.boot.emmc=true
     start rmt_storage
 
-service bridgemgrd /system/bin/bridgemgrd
-    class late_start
-    user radio
-    group radio
-    disabled
-
-service port-bridge /system/bin/port-bridge /dev/smd0 /dev/ttyGS0
-    class late_start
-    user system
-    group system inet
-    disabled
-
 on property:ro.baseband="msm"
     # Enable BT-DUN only for all msms
     setprop ro.qualcomm.bluetooth.dun false
-
-service qmiproxy /system/bin/qmiproxy
-    class main
-    user radio
-    group radio qcom_diag
-    disabled
 
 # QMUX must be in multiple groups to support external process connections
 #For EncryptionMode - remove disabled, Modify class main
@@ -427,28 +377,9 @@ service qmuxd /system/bin/qmuxd
     class main
     user radio
     group radio audio bluetooth gps qcom_diag log
-    disabled
 
 service netmgrd /system/bin/netmgrd
     class main
-    disabled
-
-#service sensors /system/bin/sensors.qcom
-#    class late_start
-#    user root
-#    group root
-#    disabled
-
-on property:ro.use_data_netmgrd=false
-#netmgr not supported on specific target
-    stop netmgrd
-
-service btwlancoex /system/bin/sh /system/etc/init.qcom.coex.sh
-    class late_start
-    user bluetooth
-    group bluetooth net_bt_admin inet net_admin net_raw
-    disabled
-    oneshot
 
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
@@ -526,19 +457,6 @@ service dhcpcd_bnep4 /system/bin/dhcpcd -BKLG
     disabled
     oneshot
 
-#for WiFi MFG(TestMode)
-service mfgloader /system/bin/mfgloader
-    class main
-    disabled
-    oneshot
-
-service wlandutservice /system/bin/wlandutservice
-    class main
-    user system
-    group wifi net_raw net_admin system inet
-    disabled
-    oneshot
-
 service macloader /system/bin/macloader
     class main
     oneshot
@@ -548,7 +466,6 @@ on property:init.svc.macloader=stopped
     chmod 0664 /data/.cid.info
     chown system root /data/.rev
     chmod 0664 /data/.rev
-# end of wifi
 
 on property:crypto.driver.load=1
      insmod /system/lib/modules/qce.ko
@@ -570,17 +487,6 @@ on property:drmdiag.load=1
 on property:drmdiag.load=0
     stop drmdiag
 
-service qcom-sh /system/bin/sh /init.qcom.sh
-    class late_start
-    user root
-    oneshot
-
-service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-
 service wifi-sdio-on /system/bin/sh /system/etc/init.qcom.sdio.sh
     class late_start
     group wifi inet
@@ -594,20 +500,88 @@ service wifi-crda /system/bin/sh /system/etc/init.crda.sh
    oneshot
 
 on property:sys.boot_completed=1
-    start qcom-post-boot
     write /sys/block/mmcblk0/queue/scheduler row
 
-#service atfwd /system/bin/ATFWD-daemon
-#    class late_start
-#    user system
-#    group system radio
-#    onrestart /system/bin/log -t RIL-ATFWD -p w "ATFWD daemon restarted"
+    # Configure the hardware properly
+    write /sys/module/lpm_resources/enable_low_power/l2 2
+    write /sys/module/lpm_resources/enable_low_power/pxo 1
+    write /sys/module/lpm_resources/enable_low_power/vdd_dig 1
+    write /sys/module/lpm_resources/enable_low_power/vdd_mem 1
+    write /sys/module/msm_pm/modes/cpu0/power_collapse/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu1/power_collapse/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu2/power_collapse/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu3/power_collapse/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu0/power_collapse/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu1/power_collapse/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu2/power_collapse/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu3/power_collapse/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu0/standalone_power_collapse/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu1/standalone_power_collapse/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu2/standalone_power_collapse/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu3/standalone_power_collapse/suspend_enabled
+    write /sys/module/msm_pm/modes/cpu0/standalone_power_collapse/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu1/standalone_power_collapse/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu2/standalone_power_collapse/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu3/standalone_power_collapse/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu0/retention/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu1/retention/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu2/retention/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu3/retention/idle_enabled 1
+    write /sys/module/msm_pm/modes/cpu0/retention/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu1/retention/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu2/retention/suspend_enabled 1
+    write /sys/module/msm_pm/modes/cpu3/retention/suspend_enabled 1
+    write /sys/module/msm_thermal/core_control/enabled 1
+
+    # Configure the CPU governor
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpufreq/interactive/above_hispeed_delay "20000 1400000:40000 1700000:20000"
+    write /sys/devices/system/cpu/cpufreq/interactive/go_hispeed_load 90
+    write /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq 1497600
+    write /sys/devices/system/cpu/cpufreq/interactive/io_is_busy 1
+    write /sys/devices/system/cpu/cpufreq/interactive/target_loads "85 1500000:90 1800000:70"
+    write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 30000
+    write /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor 100000
+    write /devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
+    write /devices/system/cpu/cpu1/cpufreq/scaling_min_freq 300000
+    write /devices/system/cpu/cpu2/cpufreq/scaling_min_freq 300000
+    write /devices/system/cpu/cpu3/cpufreq/scaling_min_freq 300000
+    write /sys/module/msm_thermal/core_control/enabled 1
+    write /sys/devices/system/cpu/cpufreq/interactive/up_threshold_any_cpu_load 75
+    write /sys/devices/system/cpu/cpufreq/interactive/up_threshold_any_cpu_freq 1728000
+    chown root system /sys/devices/system/cpu/mfreq
+    chmod 220 /sys/devices/system/cpu/mfreq
+    chown root system /sys/devices/system/cpu/cpu1/online
+    chown root system /sys/devices/system/cpu/cpu2/online
+    chown root system /sys/devices/system/cpu/cpu3/online
+    chmod 664 /sys/devices/system/cpu/cpu1/online
+    chmod 664 /sys/devices/system/cpu/cpu2/online
+    chmod 664 /sys/devices/system/cpu/cpu3/online
+    write /dev/cpuctl/apps/cpu.notify_on_migrate 1
+
+    # Configure the cpu-boost module
+    write /sys/module/cpu_boost/parameters/boost_ms 10
+    write /sys/module/cpu_boost/parameters/sync_threshold 1728000
+    write /sys/module/cpu_boost/parameters/input_boost_freq 1497600
+    write /sys/module/cpu_boost/parameters/input_boost_ms 40
+    write /sys/module/cpu_boost/parameters/plug_boost_freq 1728000
+    write /sys/module/cpu_boost/parameters/plug_boost_ms 5
+
+    # Post boot services
+    start mpdecision
 
 service hdmid /system/bin/hdmid
     class late_start
-	user system
+    user system
     group system graphics
-	socket hdmid stream 0660 system system
+    socket hdmid stream 0660 system system
     disabled
 
 on property:ro.hdmi.enable=true
@@ -627,15 +601,6 @@ service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
     oneshot
     disabled
 
-service ds_fmc_appd /system/bin/ds_fmc_appd -p "rmnet0" -D
-    class late_start
-    group radio wifi inet
-    disabled
-    oneshot
-
-on property:persist.data.ds_fmc_app.mode=1
-    start ds_fmc_appd
-
 service ims_regmanager /system/bin/exe-ims-regmanagerprocessnative
     class late_start
     user system
@@ -648,16 +613,6 @@ on property:persist.ims.regmanager.mode=1
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
     write /proc/sys/net/ipv4/tcp_adv_win_scale  1
-
-#service time_daemon /system/bin/time_daemon
-#    class late_start
-#    user root
-#    group root
-#    oneshot
-#    disabled
-
-#on property:persist.timed.enable=true
-#    start time_daemon
 
 service ril-daemon /system/bin/rild
     class main
@@ -672,20 +627,6 @@ service secril-daemon /system/bin/sec-ril
     user root
     group radio cache inet misc audio sdcard_rw qcom_diag log
 
-service ril-daemon1 /system/bin/rild -c 1
-    class late_start
-    socket rild1 stream 660 root radio
-    socket rild-debug1 stream 660 radio system
-    user root
-    disabled
-    group radio cache inet misc audio sdcard_rw qcom_oncrpc diag qcom_diag log
-
-service profiler_daemon /system/bin/profiler_daemon
-    class late_start
-    user root
-    group root
-    disabled
-
 service sec-sh /system/bin/sh /system/etc/init.sec.boot.sh
     class main
     user root
@@ -694,7 +635,6 @@ service sec-sh /system/bin/sh /system/etc/init.sec.boot.sh
 # virtual sdcard daemon running as media_rw (1023)
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
-    oneshot
 
 service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
     class late_start
@@ -708,19 +648,10 @@ service fuse_usbdisk /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/usbdisk /s
     class late_start
     disabled
 
-on property:ro.fuse_sdcard=true
-    start sdcard
-
-# This will make sure that sdcard service starts as late_start.
-on nonencrypted
-    setprop ro.fuse_sdcard ${persist.fuse_sdcard}
-
-on property:vold.decrypt=trigger_restart_framework
-    setprop ro.fuse_sdcard ${persist.fuse_sdcard}
-
 # Limit to SoC reset (1) and independent SSR (3)
 on property:persist.sys.ssr.restart_level=1
     write /sys/module/subsystem_restart/parameters/restart_level 1
+
 on property:persist.sys.ssr.restart_level=3
     write /sys/module/subsystem_restart/parameters/restart_level 3
 

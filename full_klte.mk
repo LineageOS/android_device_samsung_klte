@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
- 
+
 #
 # This file is the build configuration for a full Android
 # build for maguro hardware. This cleanly combines a set of
@@ -20,10 +20,10 @@
 # details, it only fundamentally contains two inherit-product
 # lines, full and maguro, hence its name.
 #
- 
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # Inherit from klte device
 $(call inherit-product, device/samsung/klte/device.mk)
 
@@ -33,4 +33,3 @@ PRODUCT_DEVICE := kltexx
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := klte
-

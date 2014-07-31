@@ -17,20 +17,11 @@
 <!-- Phone app resources that may need to be customized
      for different hardware or product builds. -->
 <resources>
-
-    <!-- Determine whether calls to mute the microphone in PhoneUtils
-                  are routed through the android.media.AudioManager class (true) or through
-         the com.android.internal.telephony.Phone interface (false). -->
-    <bool name="send_mic_mute_to_AudioManager">true</bool>
-
     <!-- This device implements a noise suppression device for in call audio-->
     <bool name="has_in_call_noise_suppression">true</bool>
 
     <!-- Flag indicating if the tty is enabled -->
     <bool name="tty_enabled">true</bool>
-
-    <!-- Flag indicating if the phone is a world phone -->
-    <bool name="world_phone">true</bool>
 
     <!-- Show enabled lte option for lte device -->
     <bool name="config_enabled_lte" translatable="false">true</bool>

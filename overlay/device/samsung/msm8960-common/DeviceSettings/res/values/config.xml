@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Device audio defines "Voice Earpiece Extra Gain" mode. -->
-    <bool name="config_hasVocEpXgain">true</bool>
-</resources>
