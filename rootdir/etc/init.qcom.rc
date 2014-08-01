@@ -1317,6 +1317,9 @@ service ril-daemon /system/bin/rild
     user root
     group radio cache inet misc audio log qcom_diag sdcard_r shell sdcard_rw
 
+service charger /charger
+    class charger
+
 service sec-sh /system/bin/sh /system/etc/init.sec.boot.sh
     class main
     user root
