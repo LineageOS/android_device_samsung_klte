@@ -272,7 +272,12 @@ vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxWmaDec.so
 
 # NFC
-lib/hw/nfc_nci.msm8974.so
+lib/hw/gsm/nfc_nci.msm8974.so
+lib/hw/spr/nfc_nci.msm8974.so
+vendor/firmware/bcm2079xB4_firmware.ncd
+vendor/firmware/bcm2079xB4_pre_firmware.ncd
+vendor/firmware/bcm2079xB5_firmware.ncd
+vendor/firmware/bcm2079xB5_pre_firmware.ncd
 vendor/firmware/libpn547_fw.so
 
 # Perf
