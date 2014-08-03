@@ -218,10 +218,6 @@ vendor/lib/mediadrm/libwvdrmengine.so
 bin/gsiff_daemon
 etc/permissions/com.qualcomm.location.xml
 lib/hw/flp.default.so
-lib/hw/gps.default.so
-lib/libgps.utils.so
-lib/libloc_core.so
-lib/libloc_eng.so
 lib/libloc_api_v02.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
