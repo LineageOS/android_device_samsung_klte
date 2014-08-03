@@ -298,6 +298,7 @@ vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 
@@ -306,6 +307,7 @@ bin/efsks
 bin/ks
 bin/qcks
 bin/qmuxd
+bin/rfs_access
 bin/rild
 bin/rmt_storage
 lib/cdma/libsec-ril.so

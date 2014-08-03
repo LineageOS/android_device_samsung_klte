@@ -1096,12 +1096,22 @@ service audiod /system/bin/audiod
     user system
     group system
 
+service irsc_util /system/bin/irsc_util "/etc/sec_config"
+    class main
+    user root
+    oneshot
+
+service rfs_access /system/bin/rfs_access
+    class core
+    user system
+    group system net_raw
+
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
 
 service qmuxd /system/bin/qmuxd
-    class main
+    class core
     user radio
     group radio audio bluetooth gps qcom_diag log
 
