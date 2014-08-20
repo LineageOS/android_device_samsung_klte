@@ -1049,6 +1049,11 @@ on boot
 
 # Services begin here
 
+service adsprpcd /system/bin/adsprpcd
+    class main
+    user media
+    group media
+
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class main
     user camera
