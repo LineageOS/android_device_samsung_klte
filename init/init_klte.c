@@ -60,20 +60,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.description", "kltevl-user 4.3 JSS15J N900W8VLUBMJ4 release-keys");property_set("ro.product.model", "SM-G900W8");
         property_set("ro.product.device", "kltecan");
         gsm_properties();
-    } else if (strstr(bootloader, "G900P")) {
-        /* kltespr */
-        property_set("ro.build.fingerprint", "samsung/kltespr/kltespr:4.4.2/KOT49H/G900PVPU1ANCB:user/release-keys");
-        property_set("ro.build.description", "kltespr-user 4.4.2 KOT49H G900PVPU1ANCB release-keys");
-        property_set("ro.product.model", "SM-G900P");
-        property_set("ro.product.device", "kltespr");
-        cdma_properties();
-    } else if (strstr(bootloader, "G900R4")) {
-        /* klteusc */
-        property_set("ro.build.fingerprint", "samsung/klteusc/klteusc:4.4.2/KOT49H/G900R4VXU1ANCF:user/release-keys");
-        property_set("ro.build.description", "klteusc-user 4.4.2 KOT49H G900R4VXU1ANCF release-keys");
-        property_set("ro.product.model", "SM-G900R4");
-        property_set("ro.product.device", "klteusc");
-        cdma_properties();
     } else if (strstr(bootloader, "G900T")) {
         /* kltetmo */
         property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:4.4.2/KOT49H/G900TUVU1ANCH:user/release-keys");
@@ -109,30 +95,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.model", "SM-G900A");
         property_set("ro.product.device", "klteatt");
         gsm_properties();
-    } else if (strstr(bootloader, "G900R6")) {
-        /* kltelra */
-        property_set("ro.build.fingerprint", "samsung/kltelra/kltelra:4.4.2/KOT49H/G900R6WWU2AND7:user/release-keys");
-        property_set("ro.build.description", "kltelra-user 4.4.2 KOT49H G900R6WWU2AND7 release-keys");
-        property_set("ro.product.model", "SM-G900R6");
-        property_set("ro.product.device", "kltelra");
-        cdma_properties();
-    } else if (strstr(bootloader, "G900R7")) {
-        /* klteacg */
-        property_set("ro.build.fingerprint", "samsung/klteacg/klteacg:4.4.2/KOT49H/G900R7WWU2AND8:user/release-keys");
-        property_set("ro.build.description", "klteacg-user 4.4.2 KOT49H G900R7WWU2AND8 release-keys");
-        property_set("ro.product.model", "SM-G900R7");
-        property_set("ro.product.device", "klteacg");
-        cdma_properties();
-    } else if (strstr(bootloader, "G900V")) {
-        /* hltevzw */
-        property_set("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:4.4.2/KOT49H/G900VVRU1ANCG:user/release-keys");
-        property_set("ro.build.description", "kltevzw-user 4.4.2 KOT49H G900VVRU1ANCG release-keys");
-        property_set("ro.product.model", "SM-G900V");
-        property_set("ro.product.device", "hltevzw");
-        cdma_properties();
-        property_set("ro.telephony.default_cdma_sub", "0");
-        property_set("ro.cdma.home.operator.alpha", "Verizon");
-        property_set("ro.cdma.home.operator.numeric", "311480");
     } else {
         /* kltexx */
         property_set("ro.build.fingerprint", "samsung/kltexx/klte:4.4.2/KOT49H/G900FXXU1ANCE:user/release-keys");
@@ -144,7 +106,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
-    ERROR("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
+    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
 }
 
 void gsm_properties()
@@ -152,11 +114,4 @@ void gsm_properties()
     property_set("telephony.lteOnGsmDevice", "1");
     property_set("ro.telephony.default_network", "9");
     property_set("ro.telephony.ril.v3", "newDialCode");
-}
-
-void cdma_properties()
-{
-    property_set("ro.telephony.ril.v3", "newDriverCallU,newDialCode");
-    property_set("telephony.lteOnCdmaDevice", "1");
-    property_set("ro.telephony.default_network", "10");
 }
