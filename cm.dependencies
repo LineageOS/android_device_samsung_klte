@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_device_samsung_klte-common",
+    "target_path": "device/samsung/klte-common"
+  }
+]
