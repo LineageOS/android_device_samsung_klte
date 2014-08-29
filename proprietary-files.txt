@@ -38,9 +38,9 @@ bin/qmuxd
 bin/rfs_access
 bin/rild
 bin/rmt_storage
-lib/libsec-ril.so
-lib/libril.so
 lib/libreference-ril.so
-lib/libsecril-client.so
+lib/libril.so
+lib/libsec-ril.so
 lib/libsecnativefeature.so
+lib/libsecril-client.so
 vendor/lib/libril-qcril-hook-oem.so
