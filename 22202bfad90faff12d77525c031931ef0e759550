@@ -16,6 +16,24 @@
       "revId": "22202bfad90faff12d77525c031931ef0e759550",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_bdce4758",
+        "filename": "init/init_klte.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-03T10:46:26Z",
+      "side": 0,
+      "message": ":D",
+      "parentUuid": "7a1b2928_9de70be4",
+      "revId": "22202bfad90faff12d77525c031931ef0e759550",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
