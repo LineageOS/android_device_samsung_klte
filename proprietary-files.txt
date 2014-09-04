@@ -14,6 +14,7 @@ vendor/lib/liblbs_core.so
 vendor/lib/liblocationservice.so
 
 # NFC
+lib/hw/nfc_nci.MSM8974.so:lib/hw/nfc_nci.msm8974.so
 vendor/firmware/libpn547_fw.so
 
 # Qualcomm framework
