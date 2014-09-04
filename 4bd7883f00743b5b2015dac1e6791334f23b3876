@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_34bfecfc",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-09-04T15:07:44Z",
+      "side": 1,
+      "message": "lib/hw/nfc_nci.MSM8974.so:lib/hw/nfc_nci.msm89740.so",
+      "revId": "4bd7883f00743b5b2015dac1e6791334f23b3876",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
