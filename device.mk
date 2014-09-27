@@ -22,11 +22,18 @@ $(call inherit-product-if-exists, vendor/samsung/klte/klte-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# NFC
+# NFC NXP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+
+# NFC BROADCOM (kltedv only)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/brcm/libnfc-brcm.conf:system/etc/brcm/libnfc-brcm.conf \
+    $(LOCAL_PATH)/configs/brcm/libnfc-brcm-20791b04.conf:system/etc/brcm/libnfc-brcm-20791b04.conf \
+    $(LOCAL_PATH)/configs/brcm/libnfc-brcm-20791b05.conf:system/etc/brcm/libnfc-brcm-20791b05.conf \
+    $(LOCAL_PATH)/configs/brcm/nfcee_access.xml:system/etc/brcm/nfcee_access.xml
 
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
