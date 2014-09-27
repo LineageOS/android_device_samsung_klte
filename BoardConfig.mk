@@ -25,9 +25,6 @@ TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_LIBINIT_DEFINES_FILE := device/samsung/klte/init/init_klte.c
 TARGET_UNIFIED_DEVICE := true
 
-# NFC
-BOARD_NFC_CHIPSET := pn547
-
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640
@@ -36,6 +33,9 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12669926400
 
 # Radio
 BOARD_RIL_CLASS := ../../../device/samsung/klte/ril
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/klte
 
 # inherit from the proprietary version
 -include vendor/samsung/klte/BoardConfigVendor.mk
