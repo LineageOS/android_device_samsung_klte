@@ -37,6 +37,11 @@ import java.util.Collections;
 public class KlteRIL extends RIL {
 
     private static final int RIL_REQUEST_DIAL_EMERGENCY = 10016;
+    private static final int RIL_UNSOL_RESPONSE_IMS_NETWORK_STATE_CHANGED = 1036;
+    private static final int RIL_UNSOL_DEVICE_READY_NOTI = 11008;
+    private static final int RIL_UNSOL_AM = 11010;
+    private static final int RIL_UNSOL_WB_AMR_STATE = 11017;
+    private static final int RIL_UNSOL_RESPONSE_HANDOVER = 11021;
 
     public KlteRIL(Context context, int networkMode, int cdmaSubscription) {
         super(context, networkMode, cdmaSubscription);
@@ -236,6 +241,39 @@ public class KlteRIL extends RIL {
         return new SignalStrength(gsmSignalStrength, gsmBitErrorRate, cdmaDbm, cdmaEcio, evdoDbm,
                 evdoEcio, evdoSnr, lteSignalStrength, lteRsrp, lteRsrq, lteRssnr, lteCqi,
                 tdScdmaRscp, isGsm);
+    }
+
+    @Override
+    protected void
+    processUnsolicited (Parcel p) {
+        Object ret;
+        int dataPosition = p.dataPosition(); // save off position within the Parcel
+        int response = p.readInt();
+
+        switch(response) {
+            case RIL_UNSOL_RESPONSE_IMS_NETWORK_STATE_CHANGED:
+                ret = responseVoid(p);
+                break;
+            case RIL_UNSOL_DEVICE_READY_NOTI:
+                ret = responseVoid(p);
+                break;
+            case RIL_UNSOL_AM:
+                ret = responseString(p);
+                break;
+            case RIL_UNSOL_WB_AMR_STATE:
+                ret = responseInts(p);
+                break;
+            case RIL_UNSOL_RESPONSE_HANDOVER:
+                ret = responseVoid(p);
+                break;
+            default:
+                // Rewind the Parcel
+                p.setDataPosition(dataPosition);
+
+                // Forward responses that we are not overriding to the super class
+                super.processUnsolicited(p);
+                return;
+        }
     }
 
     private void
