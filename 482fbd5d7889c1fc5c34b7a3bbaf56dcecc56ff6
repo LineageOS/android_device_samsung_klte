@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a18252c_fbf2a705",
+        "filename": "ril/telephony/java/com/android/internal/telephony/KlteRIL.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-10-19T04:13:29Z",
+      "side": 1,
+      "message": "Doesn\u0027t this collide with another RIL response?",
+      "revId": "482fbd5d7889c1fc5c34b7a3bbaf56dcecc56ff6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
