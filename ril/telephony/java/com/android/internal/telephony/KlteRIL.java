@@ -39,7 +39,13 @@ public class KlteRIL extends RIL {
     private static final int RIL_REQUEST_DIAL_EMERGENCY = 10016;
 
     public KlteRIL(Context context, int networkMode, int cdmaSubscription) {
-        super(context, networkMode, cdmaSubscription);
+        super(context, networkMode, cdmaSubscription, null);
+        mQANElements = 6;
+    }
+
+    public KlteRIL(Context context, int preferredNetworkType,
+            int cdmaSubscription, Integer instanceId) {
+        super(context, preferredNetworkType, cdmaSubscription, instanceId);
         mQANElements = 6;
     }
 
