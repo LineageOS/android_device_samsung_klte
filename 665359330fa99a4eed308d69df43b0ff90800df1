@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dab17558_8973444d",
+        "filename": "configs/libnfc-brcm.conf",
+        "patchSetId": 1
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 4380
+      },
+      "writtenOn": "2014-11-22T22:58:42Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "665359330fa99a4eed308d69df43b0ff90800df1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
