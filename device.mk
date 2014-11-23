@@ -28,5 +28,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
+# NFC HAL
+PRODUCT_PACKAGES += \
+    nfc_nci.pn54x.default
+
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
