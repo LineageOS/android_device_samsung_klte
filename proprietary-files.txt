@@ -4,7 +4,6 @@ vendor/firmware/BT_FW_VER_BCM4354_003.001.012.0167.0213_K_LTE_ORC.hcd
 
 # GPS
 -app/com.qualcomm.location.apk
-bin/gsiff_daemon
 etc/permissions/com.qualcomm.location.xml
 lib/hw/flp.default.so
 lib/libloc_api_v02.so
