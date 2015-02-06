@@ -38,6 +38,7 @@ bin/rfs_access
 bin/rild
 bin/rmt_storage
 lib/libreference-ril.so
+#lib/libsec-ril-dsds.so
 lib/libril.so
 lib/libsec-ril.so
 lib/libsecnativefeature.so

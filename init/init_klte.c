@@ -82,6 +82,15 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.model", "SM-G900A");
         property_set("ro.product.device", "klteatt");
         gsm_properties();
+    } else if (strstr(bootloader, "G900MD")) {
+        /* klteduosxx */
+        property_set("ro.build.fingerprint", "samsung/klteduosxx/klte:4.4.2/KOT49H/G900FDXXU1ANJ2:user/release-keys");
+        property_set("ro.build.description", "klteduosxx-user 4.4.2 KOT49H G900FDXXU1ANJ2 release-keys");
+        property_set("ro.product.model", "SM-G900FD");
+        property_set("ro.product.device", "klteduosxx");
+        property_set("persist.radio.multisim.config", "dsds");
+        property_set("persist.radio.apm_sim_not_pwdn", "1");
+        gsm_properties();
     } else {
         /* kltexx */
         property_set("ro.build.fingerprint", "samsung/kltexx/klte:4.4.2/KOT49H/G900FXXU1ANG2:user/release-keys");
