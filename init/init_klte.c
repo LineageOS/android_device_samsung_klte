@@ -63,8 +63,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         gsm_properties();
     } else if (strstr(bootloader, "G900T")) {
         /* kltetmo */
-        property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:4.4.2/KOT49H/G900TUVU1BNH5:user/release-keys");
-        property_set("ro.build.description", "kltetmo-user 4.4.2 KOT49H G900TUVU1BNH5 release-keys");
+        property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:5.1.1/LMY47X/G900TUVU1FOG6:user/release-keys");
+        property_set("ro.build.description", "kltetmo-user 5.1.1 LMY47X G900TUVU1FOG6 release-keys");
         property_set("ro.product.model", "SM-G900T");
         property_set("ro.product.device", "kltetmo");
         gsm_properties();
