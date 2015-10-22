@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f2577a7_d6909598",
+        "filename": "mkbootimg.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 8640
+      },
+      "writtenOn": "2015-10-22T00:31:25Z",
+      "side": 0,
+      "message": "Why would you remove the assert?  It\u0027s better to fail if the recovery.img is too big.  This call is in if !BOARD_CUSTOM_BOOTIMG_MK so it won\u0027t get called if it is not in the BOARD_CUSTOM_BOOTIMG_MK. \n\nhttps://github.com/CyanogenMod/android_build/blob/cm-13.0/core/Makefile#L972",
+      "range": {
+        "startLine": 49,
+        "startChar": 0,
+        "endLine": 49,
+        "endChar": 83
+      },
+      "revId": "9c058c9c1972a8dfbf1ede068c6811f0b9ce8108",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
