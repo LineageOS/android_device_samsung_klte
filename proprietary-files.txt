@@ -1,21 +1,28 @@
 # Bluetooth firmware
-vendor/firmware/bcm4350.hcd
-vendor/firmware/BT_FW_VER_BCM4354_003.001.012.0167.0213_K_LTE_ORC.hcd
+vendor/firmware/bcm4350_V0301.0561.hcd
 
 # GPS
--app/com.qualcomm.location.apk
-etc/permissions/com.qualcomm.location.xml
-lib/hw/flp.default.so
+etc/clatd.conf
+etc/flp.conf
+etc/gps.conf
+etc/sap.conf
+lib/hw/gps.default.so
+lib/libgps.utils.so
+lib/libloc_core.so
+lib/libloc_eng.so
 lib/libloc_api_v02.so
+lib/libmdmdetect.so
+lib/libperipheral_client.so
+vendor/lib/hw/flp.default.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
-vendor/lib/liblocationservice.so
 
 # NFC
 vendor/firmware/libpn547_fw.so
 
 # Qualcomm framework
+vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
@@ -25,7 +32,6 @@ vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_csvt_srvc.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 
