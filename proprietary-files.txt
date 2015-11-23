@@ -10,13 +10,17 @@ lib/hw/gps.default.so
 lib/libgps.utils.so
 lib/libloc_core.so
 lib/libloc_eng.so
+lib/libloc_ds_api.so
 lib/libloc_api_v02.so
 lib/libmdmdetect.so
+lib/libdsi_netctrl.so
 lib/libperipheral_client.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libgeofence.so
+vendor/lib/libnetmgr.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
+vendor/lib/libqdi.so
 
 # NFC
 vendor/firmware/libpn547_fw.so
