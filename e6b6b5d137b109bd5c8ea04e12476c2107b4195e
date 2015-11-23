@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3f4b6375_44bceeba",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-11-23T23:30:51Z",
+      "side": 1,
+      "message": "Oops, libloc_api_v02 should come before libloc_core, libloc_ds_api should come before libloc_eng.",
+      "revId": "e6b6b5d137b109bd5c8ea04e12476c2107b4195e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f4b6375_64b7eada",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-11-23T23:30:51Z",
+      "side": 1,
+      "message": "dsi_netctrl also usually gets grouped with other QMI libs.",
+      "revId": "e6b6b5d137b109bd5c8ea04e12476c2107b4195e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f4b6375_24b1f2e2",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-11-23T23:30:51Z",
+      "side": 1,
+      "message": "netmgr usually gets grouped with other QMI libs.",
+      "revId": "e6b6b5d137b109bd5c8ea04e12476c2107b4195e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f4b6375_84a8a677",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2015-11-23T23:30:51Z",
+      "side": 1,
+      "message": "qdi usually gets grouped with the other QMI libs.",
+      "revId": "e6b6b5d137b109bd5c8ea04e12476c2107b4195e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
