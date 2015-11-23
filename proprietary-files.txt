@@ -8,11 +8,10 @@ etc/gps.conf
 etc/sap.conf
 lib/hw/gps.default.so
 lib/libgps.utils.so
-lib/libloc_core.so
-lib/libloc_eng.so
 lib/libloc_api_v02.so
-lib/libmdmdetect.so
-lib/libperipheral_client.so
+lib/libloc_core.so
+lib/libloc_ds_api.so
+lib/libloc_eng.so
 vendor/lib/hw/flp.default.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
@@ -22,11 +21,16 @@ vendor/lib/liblbs_core.so
 vendor/firmware/libpn547_fw.so
 
 # Qualcomm framework
+lib/libdsi_netctrl.so
+lib/libmdmdetect.so
+lib/libperipheral_client.so
 vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
+vendor/lib/libnetmgr.so
 vendor/lib/libqcci_legacy.so
+vendor/lib/libqdi.so
 vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_qmux.so
