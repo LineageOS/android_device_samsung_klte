@@ -21,11 +21,11 @@ vendor/lib/liblbs_core.so
 vendor/firmware/libpn547_fw.so
 
 # Qualcomm framework
-lib/libdsi_netctrl.so
 lib/libmdmdetect.so
 lib/libperipheral_client.so
 vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so
+vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libnetmgr.so
