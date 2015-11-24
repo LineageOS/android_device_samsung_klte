@@ -16,6 +16,24 @@
       "revId": "949844324bac1ceb7e620bb24f03c9527d2f2642",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ff82abbf_88cbfb1c",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 9560
+      },
+      "writtenOn": "2015-11-24T09:30:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ff82abbf_a8d91f23",
+      "revId": "949844324bac1ceb7e620bb24f03c9527d2f2642",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
