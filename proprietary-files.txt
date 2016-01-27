@@ -3,7 +3,6 @@ vendor/firmware/bcm4350_V0301.0561.hcd
 
 # GPS
 etc/clatd.conf
-etc/flp.conf
 etc/gps.conf
 etc/sap.conf
 lib/hw/gps.default.so
