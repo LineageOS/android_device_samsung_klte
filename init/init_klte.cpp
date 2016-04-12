@@ -105,8 +105,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         gsm_properties();
     } else {
         /* kltexx */
-        property_set("ro.build.fingerprint", "samsung/kltexx/klte:4.4.2/KOT49H/G900FXXU1ANG2:user/release-keys");
-        property_set("ro.build.description", "kltexx-user 4.4.2 KOT49H G900FXXU1ANG2 release-keys");
+        property_set("ro.build.fingerprint", "samsung/kltexx/klte:5.0/LRX21T/G900FDXU1BOH4:user/release-keys");
+        property_set("ro.build.description", "kltexx-user 5.0 LRX21T G900FDXU1BOH4 release-keys");
         property_set("ro.product.model", "SM-G900F");
         property_set("ro.product.device", "kltexx");
         gsm_properties();
