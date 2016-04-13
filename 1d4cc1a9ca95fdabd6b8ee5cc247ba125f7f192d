@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7faddb67_5db25fe8",
+        "filename": "init/init_klte.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-04-13T11:00:42Z",
+      "side": 1,
+      "message": "shouldn\u0027t this be klteub?",
+      "range": {
+        "startLine": 83,
+        "startChar": 43,
+        "endLine": 83,
+        "endChar": 47
+      },
+      "revId": "1d4cc1a9ca95fdabd6b8ee5cc247ba125f7f192d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7faddb67_7db5dbcc",
+        "filename": "init/init_klte.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 14088
+      },
+      "writtenOn": "2016-04-13T11:00:42Z",
+      "side": 1,
+      "message": "is this klteatt or klteuc? like this it is mixed.",
+      "range": {
+        "startLine": 86,
+        "startChar": 8,
+        "endLine": 88,
+        "endChar": 100
+      },
+      "revId": "1d4cc1a9ca95fdabd6b8ee5cc247ba125f7f192d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
