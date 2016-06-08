@@ -1,5 +1,6 @@
 # Bluetooth firmware
-vendor/firmware/bcm4350_V0301.0561.hcd
+vendor/firmware/bcm4350_V0353.0727.hcd
+vendor/firmware/bcm4350_V0353.0733_wisol.hcd
 
 # GPS
 etc/clatd.conf
@@ -9,9 +10,9 @@ lib/hw/gps.default.so
 lib/libgps.utils.so
 lib/libloc_api_v02.so
 lib/libloc_core.so
-lib/libloc_ds_api.so
 lib/libloc_eng.so
 vendor/lib/hw/flp.default.so
+vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
@@ -21,15 +22,12 @@ vendor/firmware/libpn547_fw.so
 
 # Qualcomm framework
 lib/libmdmdetect.so
-lib/libperipheral_client.so
 vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
 vendor/lib/libnetmgr.so
 vendor/lib/libqcci_legacy.so
-vendor/lib/libqdi.so
 vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_qmux.so
@@ -48,6 +46,7 @@ bin/rild
 bin/rmt_storage
 lib/libreference-ril.so
 lib/libril.so
+lib/librilutils.so
 lib/libsec-ril.so
 lib/libsecnativefeature.so
 lib/libsecril-client.so
