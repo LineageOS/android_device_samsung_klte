@@ -21,8 +21,8 @@ TARGET_OTA_ASSERT_DEVICE := kltexx,kltelra,kltetmo,kltecan,klteatt,klteub,klteac
 TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_eur_defconfig
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/samsung/klte/init/init_klte.cpp
+TARGET_INIT_VENDOR_LIB := libinit_msm8974
+TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/klte/init/init_klte.cpp
 TARGET_UNIFIED_DEVICE := true
 
 # NFC
