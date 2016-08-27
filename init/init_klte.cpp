@@ -37,53 +37,45 @@
 
 #include "init_msm8974.h"
 
-#define ISMATCH(a, b) (!strncmp((a), (b), PROP_VALUE_MAX))
-
 void init_target_properties()
 {
-    char platform[PROP_VALUE_MAX];
-    char bootloader[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char devicename[PROP_VALUE_MAX];
-    int rc;
-
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
+    std::string platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
         return;
 
-    property_get("ro.bootloader", bootloader);
+    std::string bootloader = property_get("ro.bootloader");
 
-    if (strstr(bootloader, "G900W8")) {
+    if (bootloader.find("G900W8") == 0) {
         /* kltecan */
         property_set("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLU1DPD3:user/release-keys");
         property_set("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLU1DPD3 release-keys");
         property_set("ro.product.model", "SM-G900W8");
         property_set("ro.product.device", "kltecan");
-    } else if (strstr(bootloader, "G900T")) {
+    } else if (bootloader.find("G900T") == 0) {
         /* kltetmo */
         property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVU1GPE1:user/release-keys");
         property_set("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVU1GPE1 release-keys");
         property_set("ro.product.model", "SM-G900T");
         property_set("ro.product.device", "kltetmo");
-    } else if (strstr(bootloader, "G900M")) {
+    } else if (bootloader.find("G900M") == 0) {
         /* klteub */
         property_set("ro.build.fingerprint", "samsung/klteub/klte:6.0.1/MMB29M/G900MUBU1CPC4:user/release-keys");
         property_set("ro.build.description", "klteub-user 6.0.1 MMB29M G900MUBU1CPC4 release-keys");
         property_set("ro.product.model", "SM-G900M");
         property_set("ro.product.device", "klte");
-    } else if (strstr(bootloader, "G900A")) {
+    } else if (bootloader.find("G900A") == 0) {
         /* klteatt */
         property_set("ro.build.fingerprint", "samsung/klteuc/klteatt:5.1.1/LMY47X/G900AUCU4CPA1:user/release-keys");
         property_set("ro.build.description", "klteuc-user 5.1.1 LMY47X G900AUCU4CPA1 release-keys");
         property_set("ro.product.model", "SM-G900A");
         property_set("ro.product.device", "klteatt");
-    } else if (strstr(bootloader, "G900S")) {
+    } else if (bootloader.find("G900S") == 0) {
         /* klteskt */
         property_set("ro.build.fingerprint", "samsung/klteskt/klteskt:6.0.1/MMB29M/G900SKSU1CPB9:user/release-keys");
         property_set("ro.build.description", "klteskt-user 6.0.1 MMB29M G900SKSU1CPB9 release-keys");
         property_set("ro.product.model", "SM-G900S");
         property_set("ro.product.device", "klteskt");
-    } else if (strstr(bootloader, "G900K")) {
+    } else if (bootloader.find("G900K") == 0) {
         /* kltektt */
         property_set("ro.build.fingerprint", "samsung/kltektt/kltektt:6.0.1/MMB29M/G900KKTU1CPE1:user/release-keys");
         property_set("ro.build.description", "kltektt-user 6.0.1 MMB29M G900KKTU1CPE1 release-keys");
@@ -97,7 +89,6 @@ void init_target_properties()
         property_set("ro.product.device", "klte");
     }
 
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
+    std::string device = property_get("ro.product.device");
+    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
 }
