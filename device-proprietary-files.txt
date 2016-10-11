@@ -27,7 +27,6 @@ vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
-vendor/lib/libnetmgr.so
 vendor/lib/libqcci_legacy.so
 vendor/lib/libqdi.so
 vendor/lib/libqmi.so
@@ -41,6 +40,7 @@ vendor/lib/libqmiservices.so
 # Radio
 bin/efsks
 bin/ks
+bin/netmgrd
 bin/qcks
 bin/qmuxd
 bin/rfs_access
@@ -48,7 +48,8 @@ bin/rild
 bin/rmt_storage
 lib/libreference-ril.so
 lib/libril.so
-lib/libsec-ril.so
 lib/libsecnativefeature.so
+lib/libsec-ril.so
 lib/libsecril-client.so
+vendor/lib/libnetmgr.so
 vendor/lib/libril-qcril-hook-oem.so
