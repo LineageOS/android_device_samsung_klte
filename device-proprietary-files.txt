@@ -48,7 +48,7 @@ bin/rild
 bin/rmt_storage
 lib/libreference-ril.so
 lib/libril.so
-lib/libsec-ril.so
 lib/libsecnativefeature.so
+lib/libsec-ril.so
 lib/libsecril-client.so
 vendor/lib/libril-qcril-hook-oem.so
