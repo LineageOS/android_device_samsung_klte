@@ -69,18 +69,6 @@ void init_target_properties()
         property_set("ro.build.description", "klteuc-user 5.1.1 LMY47X G900AUCU4CPA1 release-keys");
         property_set("ro.product.model", "SM-G900A");
         property_set("ro.product.device", "klteatt");
-    } else if (bootloader.find("G900S") == 0) {
-        /* klteskt */
-        property_set("ro.build.fingerprint", "samsung/klteskt/klteskt:6.0.1/MMB29M/G900SKSU1CPB9:user/release-keys");
-        property_set("ro.build.description", "klteskt-user 6.0.1 MMB29M G900SKSU1CPB9 release-keys");
-        property_set("ro.product.model", "SM-G900S");
-        property_set("ro.product.device", "klteskt");
-    } else if (bootloader.find("G900K") == 0) {
-        /* kltektt */
-        property_set("ro.build.fingerprint", "samsung/kltektt/kltektt:6.0.1/MMB29M/G900KKTU1CPE1:user/release-keys");
-        property_set("ro.build.description", "kltektt-user 6.0.1 MMB29M G900KKTU1CPE1 release-keys");
-        property_set("ro.product.model", "SM-G900K");
-        property_set("ro.product.device", "kltektt");
     } else {
         /* kltexx */
         property_set("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CPHW:user/release-keys");
