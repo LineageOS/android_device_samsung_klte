@@ -1,9 +1,24 @@
+# GPS
+etc/clatd.conf
+etc/gps.conf
+etc/izat.conf
+etc/sap.conf
+lib/hw/gps.default.so
+lib/libgps.utils.so
+lib/libloc_api_v02.so
+lib/libloc_core.so
+lib/libloc_eng.so
+vendor/lib/hw/flp.default.so
+vendor/lib/libflp.so
+vendor/lib/libgeofence.so
+vendor/lib/libizat_core.so
+vendor/lib/liblbs_core.so
+
 # NFC
 vendor/firmware/libpn547_fw.so
 
 # Qualcomm framework
 lib/libmdmdetect.so
-lib/libperipheral_client.so
 vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so
 vendor/lib/libdsi_netctrl.so
