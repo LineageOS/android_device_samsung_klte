@@ -47,32 +47,32 @@ void init_target_properties()
 
     if (bootloader.find("G900W8") == 0) {
         /* kltecan */
-        property_set("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLU1DPD3:user/release-keys");
-        property_set("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLU1DPD3 release-keys");
+        property_set("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLS1DPF3:user/release-keys");
+        property_set("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLS1DPF3 release-keys");
         property_set("ro.product.model", "SM-G900W8");
         property_set("ro.product.device", "kltecan");
     } else if (bootloader.find("G900T") == 0) {
         /* kltetmo */
-        property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVU1GPE1:user/release-keys");
-        property_set("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVU1GPE1 release-keys");
+        property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVS1GPK3:user/release-keys");
+        property_set("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVS1GPK3 release-keys");
         property_set("ro.product.model", "SM-G900T");
         property_set("ro.product.device", "kltetmo");
     } else if (bootloader.find("G900M") == 0) {
         /* klteub */
-        property_set("ro.build.fingerprint", "samsung/klteub/klte:6.0.1/MMB29M/G900MUBS1CPJ2:user/release-keys");
-        property_set("ro.build.description", "klteub-user 6.0.1 MMB29M G900MUBS1CPJ2 release-keys");
+        property_set("ro.build.fingerprint", "samsung/klteub/klte:6.0.1/MMB29M/G900MUBS1CPL8:user/release-keys");
+        property_set("ro.build.description", "klteub-user 6.0.1 MMB29M G900MUBS1CPL8 release-keys");
         property_set("ro.product.model", "SM-G900M");
         property_set("ro.product.device", "klte");
-    } else if (bootloader.find("G900A") == 0) {
-        /* klteatt */
-        property_set("ro.build.fingerprint", "samsung/klteuc/klteatt:5.1.1/LMY47X/G900AUCU4CPA1:user/release-keys");
-        property_set("ro.build.description", "klteuc-user 5.1.1 LMY47X G900AUCU4CPA1 release-keys");
-        property_set("ro.product.model", "SM-G900A");
-        property_set("ro.product.device", "klteatt");
+    } else if (bootloader.find("G900AZ") == 0) {
+        /* klteaio - Cricket MVNO */
+        property_set("ro.build.fingerprint", "samsung/kltetu/klteaio:5.0/LRX21T/G900AZTUS3BOGE:user/release-keys");
+        property_set("ro.build.description", "kltetu-user 5.0 LRX21T G900AZTUS3BOGE release-keys");
+        property_set("ro.product.model", "SM-G900AZ");
+        property_set("ro.product.device", "klteaio");
     } else {
         /* kltexx */
-        property_set("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CPHW:user/release-keys");
-        property_set("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CPHW release-keys");
+        property_set("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CQAV:user/release-keys");
+        property_set("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CQAV release-keys");
         property_set("ro.product.model", "SM-G900F");
         property_set("ro.product.device", "klte");
     }
