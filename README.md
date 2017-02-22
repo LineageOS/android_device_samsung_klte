@@ -2,7 +2,7 @@ Copyright 2014 - The CyanogenMod Project
 
 Copyright 2017 - The LineageOS Project
 
-Device configuration for Samsung Galaxy S5 Unified GSM variants (SM-G900F, SM-G900M, SM-G900T, SM-G900W8).
+Device configuration for Samsung Galaxy S5 Unified variants (SM-G900F, SM-G900M, SM-G900T, SM-G900V, SM-G900W8, SM-S902L).
 ========================================
 
 Basic   | Specification List
