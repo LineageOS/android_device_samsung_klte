@@ -1,5 +1,6 @@
 /*
    Copyright (c) 2016, The Linux Foundation. All rights reserved.
+   Copyright (c) 2017, The LineageOS Project. All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -52,19 +53,19 @@ void init_target_properties()
 
     std::string bootloader = property_get("ro.bootloader");
 
-    if (bootloader.find("G900W8") == 0) {
-        /* kltecan */
-        property_set("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLS1DPF3:user/release-keys");
-        property_set("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLS1DPF3 release-keys");
-        property_set("ro.product.model", "SM-G900W8");
-        property_set("ro.product.device", "kltecan");
+    if (bootloader.find("G900AZ") == 0) {
+        /* klteaio - Cricket MVNO */
+        property_set("ro.build.fingerprint", "samsung/kltetu/klteaio:5.0/LRX21T/G900AZTUS3BOGE:user/release-keys");
+        property_set("ro.build.description", "kltetu-user 5.0 LRX21T G900AZTUS3BOGE release-keys");
+        property_set("ro.product.model", "SM-G900AZ");
+        property_set("ro.product.device", "klteaio");
         gsm_properties();
-    } else if (bootloader.find("G900T") == 0) {
-        /* kltetmo */
-        property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVS1GQA2:user/release-keys");
-        property_set("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVS1GQA2 release-keys");
-        property_set("ro.product.model", "SM-G900T");
-        property_set("ro.product.device", "kltetmo");
+    } else if (bootloader.find("G900F") == 0) {
+        /* kltexx */
+        property_set("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CQBW:user/release-keys");
+        property_set("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CQBW release-keys");
+        property_set("ro.product.model", "SM-G900F");
+        property_set("ro.product.device", "klte");
         gsm_properties();
     } else if (bootloader.find("G900M") == 0) {
         /* klteub */
@@ -73,19 +74,21 @@ void init_target_properties()
         property_set("ro.product.model", "SM-G900M");
         property_set("ro.product.device", "klte");
         gsm_properties();
-    } else if (bootloader.find("G900AZ") == 0) {
-        /* klteaio - Cricket MVNO */
-        property_set("ro.build.fingerprint", "samsung/kltetu/klteaio:5.0/LRX21T/G900AZTUS3BOGE:user/release-keys");
-        property_set("ro.build.description", "kltetu-user 5.0 LRX21T G900AZTUS3BOGE release-keys");
-        property_set("ro.product.model", "SM-G900AZ");
-        property_set("ro.product.device", "klteaio");
+    } else if (bootloader.find("G900T") == 0) {
+        /* kltetmo */
+        property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVS1GQA2:user/release-keys");
+        property_set("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVS1GQA2 release-keys");
+        property_set("ro.product.model", "SM-G900T");
+        property_set("ro.product.device", "kltetmo");
+        gsm_properties();
+    } else if (bootloader.find("G900W8") == 0) {
+        /* kltecan */
+        property_set("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLS1DPF3:user/release-keys");
+        property_set("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLS1DPF3 release-keys");
+        property_set("ro.product.model", "SM-G900W8");
+        property_set("ro.product.device", "kltecan");
         gsm_properties();
     } else {
-        /* kltexx */
-        property_set("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CQBW:user/release-keys");
-        property_set("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CQBW release-keys");
-        property_set("ro.product.model", "SM-G900F");
-        property_set("ro.product.device", "klte");
         gsm_properties();
     }
 
