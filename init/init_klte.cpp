@@ -37,6 +37,13 @@
 
 #include "init_msm8974.h"
 
+void gsm_properties()
+{
+    property_set("ro.telephony.default_network", "9");
+    property_set("ro.telephony.ril.config", "newDialCode");
+    property_set("telephony.lteOnGsmDevice", "1");
+}
+
 void init_target_properties()
 {
     std::string platform = property_get("ro.board.platform");
@@ -51,30 +58,35 @@ void init_target_properties()
         property_set("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLS1DPF3 release-keys");
         property_set("ro.product.model", "SM-G900W8");
         property_set("ro.product.device", "kltecan");
+        gsm_properties();
     } else if (bootloader.find("G900T") == 0) {
         /* kltetmo */
         property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVS1GQA2:user/release-keys");
         property_set("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVS1GQA2 release-keys");
         property_set("ro.product.model", "SM-G900T");
         property_set("ro.product.device", "kltetmo");
+        gsm_properties();
     } else if (bootloader.find("G900M") == 0) {
         /* klteub */
         property_set("ro.build.fingerprint", "samsung/klteub/klte:6.0.1/MMB29M/G900MUBS1CQB1:user/release-keys");
         property_set("ro.build.description", "klteub-user 6.0.1 MMB29M G900MUBS1CQB1 release-keys");
         property_set("ro.product.model", "SM-G900M");
         property_set("ro.product.device", "klte");
+        gsm_properties();
     } else if (bootloader.find("G900AZ") == 0) {
         /* klteaio - Cricket MVNO */
         property_set("ro.build.fingerprint", "samsung/kltetu/klteaio:5.0/LRX21T/G900AZTUS3BOGE:user/release-keys");
         property_set("ro.build.description", "kltetu-user 5.0 LRX21T G900AZTUS3BOGE release-keys");
         property_set("ro.product.model", "SM-G900AZ");
         property_set("ro.product.device", "klteaio");
+        gsm_properties();
     } else {
         /* kltexx */
         property_set("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CQBW:user/release-keys");
         property_set("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CQBW release-keys");
         property_set("ro.product.model", "SM-G900F");
         property_set("ro.product.device", "klte");
+        gsm_properties();
     }
 
     std::string device = property_get("ro.product.device");
