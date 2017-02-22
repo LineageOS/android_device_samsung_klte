@@ -38,6 +38,23 @@
 
 #include "init_msm8974.h"
 
+void cdma_properties(char const *operator_alpha,
+        char const *operator_numeric,
+        char const *default_network)
+{
+    /* Dynamic CDMA Properties */
+    property_set("ro.cdma.home.operator.alpha", operator_alpha);
+    property_set("ro.cdma.home.operator.numeric", operator_numeric);
+    property_set("ro.telephony.default_network", default_network);
+
+    /* Static CDMA Properties */
+    property_set("ril.subscription.types", "NV,RUIM");
+    property_set("ro.telephony.default_cdma_sub", "0");
+    property_set("ro.telephony.get_imsi_from_sim", "true");
+    property_set("ro.telephony.ril.config", "newDriverCallU,newDialCode");
+    property_set("telephony.lteOnCdmaDevice", "1");
+}
+
 void gsm_properties()
 {
     property_set("ro.telephony.default_network", "9");
@@ -81,6 +98,13 @@ void init_target_properties()
         property_set("ro.product.model", "SM-G900T");
         property_set("ro.product.device", "kltetmo");
         gsm_properties();
+    } else if (bootloader.find("G900V") == 0) {
+        /* kltevzw - SM-G900V - Verizon */
+        property_set("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:6.0.1/MMB29M/G900VVRS2DQB2:user/release-keys");
+        property_set("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRS2DQB2 release-keys");
+        property_set("ro.product.model", "SM-G900V");
+        property_set("ro.product.device", "kltevzw");
+        cdma_properties("Verizon", "311480", "10");
     } else if (bootloader.find("G900W8") == 0) {
         /* kltecan */
         property_set("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLS1DPF3:user/release-keys");
@@ -88,6 +112,13 @@ void init_target_properties()
         property_set("ro.product.model", "SM-G900W8");
         property_set("ro.product.device", "kltecan");
         gsm_properties();
+    } else if (bootloader.find("S902L") == 0) {
+        /* kltetfnvzw - SM-S902L - TracFone Verizon MVNO */
+        property_set("ro.build.fingerprint", "samsung/kltetfnvzw/kltetfnvzw:4.4.2/KOT49H/S902LUDUAOD3:user/release-keys");
+        property_set("ro.build.description", "kltetfnvzw-user 4.4.2 KOT49H S902LUDUAOD3 release-keys");
+        property_set("ro.product.model", "SM-S902L");
+        property_set("ro.product.device", "kltetfnvzw");
+        cdma_properties("TracFone", "310000", "10");
     } else {
         gsm_properties();
     }
