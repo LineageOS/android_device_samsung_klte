@@ -40,9 +40,11 @@
 
 void cdma_properties(char const *operator_alpha,
         char const *operator_numeric,
-        char const *default_network)
+        char const *default_network,
+        char const *rild_libpath)
 {
     /* Dynamic CDMA Properties */
+    property_set("rild.libpath", rild_libpath);
     property_set("ro.cdma.home.operator.alpha", operator_alpha);
     property_set("ro.cdma.home.operator.numeric", operator_numeric);
     property_set("ro.telephony.default_network", default_network);
@@ -56,6 +58,7 @@ void cdma_properties(char const *operator_alpha,
 
 void gsm_properties()
 {
+    property_set("rild.libpath", "/system/lib/libsec-ril.so");
     property_set("ro.telephony.default_network", "9");
     property_set("telephony.lteOnGsmDevice", "1");
 }
@@ -102,7 +105,7 @@ void init_target_properties()
         property_set("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRS2DQA1 release-keys");
         property_set("ro.product.model", "SM-G900V");
         property_set("ro.product.device", "kltevzw");
-        cdma_properties("Verizon", "311480", "10");
+        cdma_properties("Verizon", "311480", "10", "/system/lib/libsec-ril-vzw.so");
     } else if (bootloader.find("G900W8") == 0) {
         /* kltecan */
         property_set("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLS1DPF3:user/release-keys");
@@ -116,7 +119,7 @@ void init_target_properties()
         property_set("ro.build.description", "kltetfnvzw-user 4.4.2 KOT49H S902LUDUAOD3 release-keys");
         property_set("ro.product.model", "SM-S902L");
         property_set("ro.product.device", "kltetfnvzw");
-        cdma_properties("TracFone", "310000", "10");
+        cdma_properties("TracFone", "310000", "10", "/system/lib/libsec-ril-vzw.so");
     } else {
         gsm_properties();
     }
