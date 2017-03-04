@@ -53,14 +53,14 @@ void init_target_properties()
         property_set("ro.product.device", "kltecan");
     } else if (bootloader.find("G900T") == 0) {
         /* kltetmo */
-        property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVS1GPK3:user/release-keys");
-        property_set("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVS1GPK3 release-keys");
+        property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVS1GQA2:user/release-keys");
+        property_set("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVS1GQA2 release-keys");
         property_set("ro.product.model", "SM-G900T");
         property_set("ro.product.device", "kltetmo");
     } else if (bootloader.find("G900M") == 0) {
         /* klteub */
-        property_set("ro.build.fingerprint", "samsung/klteub/klte:6.0.1/MMB29M/G900MUBS1CPL8:user/release-keys");
-        property_set("ro.build.description", "klteub-user 6.0.1 MMB29M G900MUBS1CPL8 release-keys");
+        property_set("ro.build.fingerprint", "samsung/klteub/klte:6.0.1/MMB29M/G900MUBS1CQB1:user/release-keys");
+        property_set("ro.build.description", "klteub-user 6.0.1 MMB29M G900MUBS1CQB1 release-keys");
         property_set("ro.product.model", "SM-G900M");
         property_set("ro.product.device", "klte");
     } else if (bootloader.find("G900AZ") == 0) {
@@ -71,8 +71,8 @@ void init_target_properties()
         property_set("ro.product.device", "klteaio");
     } else {
         /* kltexx */
-        property_set("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CQAV:user/release-keys");
-        property_set("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CQAV release-keys");
+        property_set("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CQBW:user/release-keys");
+        property_set("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CQBW release-keys");
         property_set("ro.product.model", "SM-G900F");
         property_set("ro.product.device", "klte");
     }
