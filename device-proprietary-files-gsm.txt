@@ -1,30 +1,30 @@
-## GSM Blobs - Pinned to G900FXXS1BPCL_G900FOXA1BOJ1_BTU versions
+## GSM Blobs - Pinned to G900FXXS1CQBW_G900FOXA1CPJ6_BTU versions
 # Qualcomm framework
-blobs/gsm/lib/libmdmdetect.so|9c19d5aacc094597c166529386f83ac721ac1979
-blobs/gsm/vendor/lib/libconfigdb.so|a7eedfbb0ffa070c9239f0d293262e268342da1d
-blobs/gsm/vendor/lib/libdiag.so|2dd30d2de57567aa4575f98e4679cdbd625bbbe6
-blobs/gsm/vendor/lib/libdsutils.so|99fac25d6a10ea89a7f66cfc7c3a36478a178568
-blobs/gsm/vendor/lib/libidl.so|9b871bda84a1204b35b5a93311d666aa36a7f8b8
-blobs/gsm/vendor/lib/libqcci_legacy.so|5f0f25a72677d0b3183031490e45b6de26735327
-blobs/gsm/vendor/lib/libqmi.so|d120b126ba94cb2d4164243ef7a8516168b6fedf
-blobs/gsm/vendor/lib/libqmi_cci.so|b94c84c54183e538a7802ca531da7cf2b8176614
-blobs/gsm/vendor/lib/libqmi_client_qmux.so|79cb7b305bd9f87c581f26c805f4ca2bbdf3a069
-blobs/gsm/vendor/lib/libqmi_common_so.so|6c70d0c23898f4d5aa5a962736a06aa3d21e7aa6
-blobs/gsm/vendor/lib/libqmi_csi.so|dee249a1f0fff082b5e5547cfab103ac10ab55e2
-blobs/gsm/vendor/lib/libqmi_encdec.so|82e39ae7e4bb8651d06fdae99fc38e3fb390b62d
-blobs/gsm/vendor/lib/libqmiservices.so|0b90d67d7ec0b0bc3de2b5ccc3afcda13bd5ffd8
+blobs/gsm/lib/libmdmdetect.so|daf080fbd8109ad404bbb2a3c2c8faaada6b7ef6
+blobs/gsm/vendor/lib/libconfigdb.so|ea8c876f1d22947ca898481421f1f42ca5758153
+blobs/gsm/vendor/lib/libdiag.so|e65b6fd2c9348f4b1fe1f81c04107619749a5b31
+blobs/gsm/vendor/lib/libdsutils.so|1e68e04a6a4bb490f0f0d7991c8284c2939e1cf1
+blobs/gsm/vendor/lib/libidl.so|be7b064ba790fbc71ad7d5fa27e5b102a367627b
+blobs/gsm/vendor/lib/libqcci_legacy.so|e7b0b6cd376bbc6251ebfc52362d7fb591ea89b3
+blobs/gsm/vendor/lib/libqmi.so|2721f762c1da9eceffc0cf1679891fd3a40bf872
+blobs/gsm/vendor/lib/libqmi_cci.so|09b2b4cba0159ab0d4a10925b0489b3de19650dc
+blobs/gsm/vendor/lib/libqmi_client_qmux.so|e1ca67327ebdd48ecade2388c34bbaaeb7c9f498
+blobs/gsm/vendor/lib/libqmi_common_so.so|ab2e914c3bcfb00e46dcca0714ecd29e52d3e194
+blobs/gsm/vendor/lib/libqmi_csi.so|e02d452e92d3f971bf25a35801fd52ef100ea63e
+blobs/gsm/vendor/lib/libqmi_encdec.so|dddd9aaaf45b090a919a0ac3b66ea20b47ec4973
+blobs/gsm/vendor/lib/libqmiservices.so|755ae5cd8fe8448956e242ef38faa5b41f374b94
 
 # Radio
-blobs/gsm/bin/efsks|2c366ac7ab878068c77e5598c411a48cf47b056a
-blobs/gsm/bin/ks|949406ae5d1b74034b3828af1905a181e4b69961
-blobs/gsm/bin/qcks|9026c84f32e1ee5121024c72b878c09dfde95e5b
-blobs/gsm/bin/qmuxd|e257d63996812e2eb23810bda59913f558ee03d2
-blobs/gsm/bin/rfs_access|49a8516ed01b609a9e5079d8135b75db5b024236
-blobs/gsm/bin/rild|0b849cf10cb658e425e871e0d3cf86fe2ccdafd7
-blobs/gsm/bin/rmt_storage|000ddcabfc9416e9a27ba6d04860cc14b6803cdd
-blobs/gsm/lib/libreference-ril.so|bca1a7e61506368fe1937a3204e611a19ed0e306
-blobs/gsm/lib/libril.so|aebfbe2448d032c1fb14d3bef41e771d9537c6a2
-blobs/gsm/lib/libsec-ril.so|075570a628f465f92f3067afcefb6938d4e5dc3a
-blobs/gsm/lib/libsecnativefeature.so|74ae0c6e68f111ce3b29099411a71752e1703d80
-blobs/gsm/lib/libsecril-client.so|3db2a9fd59cfcf25a3d478e4494ba6348642db4e
-blobs/gsm/vendor/lib/libril-qcril-hook-oem.so|6a73ed46f4fbcb283eea5fb44b24a7d14522bfe5
+blobs/gsm/bin/efsks|f708f1617b366b07f4b86916565ad00b926ef2be
+blobs/gsm/bin/ks|256fa5ad7be43d31cd064d9364f97be626686e66
+blobs/gsm/bin/qcks|4e0291d8e53acbba30ce9a0decb47db1561d1240
+blobs/gsm/bin/qmuxd|30c3df307916d4d60d65eb89c54585a3a8ccd805
+blobs/gsm/bin/rfs_access|eb3c2aae4623874e06c9fd48950011e91b45d609
+blobs/gsm/bin/rild|ed70f64735bafd322ae8fa0739680972854bee35
+blobs/gsm/bin/rmt_storage|0215556b978c87579bad42f369ac1f5bc9ed2459
+blobs/gsm/lib/libreference-ril.so|be2b4a7bcd078797dab17b781d804aad9eae2170
+blobs/gsm/lib/libril.so|024e1678ee7e525c46b4415897797887575461c1
+blobs/gsm/lib/libsec-ril.so|a33bdc00419b38529a7cef735333cd269dd3aae0
+blobs/gsm/lib/libsecnativefeature.so|18c8fca726fbec3bebf943dfbe2fe354762871b8
+blobs/gsm/lib/libsecril-client.so|8a1c91318ae0af1dc12b0214f36f5132737ac465
+blobs/gsm/vendor/lib/libril-qcril-hook-oem.so|a95faedbd76f17f26f6ce429ead9effbb35d8433
