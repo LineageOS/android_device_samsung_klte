@@ -1,30 +1,30 @@
-## Verizon Blobs - pinned to G900VVRU2BPB1_G900VVZW2BPB1_VZW versions
+## Verizon Blobs - pinned to G900VVRS2DQB2_G900VVZW2DQB2_VZW versions
 # Qualcomm Framework
-blobs/vzw/lib/libmdmdetect.so|9c19d5aacc094597c166529386f83ac721ac1979
-blobs/vzw/vendor/lib/libconfigdb.so|a7eedfbb0ffa070c9239f0d293262e268342da1d
-blobs/vzw/vendor/lib/libdiag.so|9fe0fbec3bce0ee50eaf8fdf95893b834ed6771f
-blobs/vzw/vendor/lib/libdsutils.so|99fac25d6a10ea89a7f66cfc7c3a36478a178568
-blobs/vzw/vendor/lib/libidl.so|9b871bda84a1204b35b5a93311d666aa36a7f8b8
-blobs/vzw/vendor/lib/libqcci_legacy.so|5f0f25a72677d0b3183031490e45b6de26735327
-blobs/vzw/vendor/lib/libqmi.so|d43116e2f8cb79a8baba54952548cc6b93ff3509
-blobs/vzw/vendor/lib/libqmi_cci.so|b94c84c54183e538a7802ca531da7cf2b8176614
-blobs/vzw/vendor/lib/libqmi_client_qmux.so|79cb7b305bd9f87c581f26c805f4ca2bbdf3a069
-blobs/vzw/vendor/lib/libqmi_common_so.so|6c70d0c23898f4d5aa5a962736a06aa3d21e7aa6
-blobs/vzw/vendor/lib/libqmi_csi.so|dee249a1f0fff082b5e5547cfab103ac10ab55e2
-blobs/vzw/vendor/lib/libqmi_encdec.so|82e39ae7e4bb8651d06fdae99fc38e3fb390b62d
-blobs/vzw/vendor/lib/libqmiservices.so|cba7f6925835faca8cd5c21423074142b4083f28
+blobs/vzw/lib/libmdmdetect.so|b2e5bfe4cf0ca39ea1d1710c44c1d6ddeb15a30b
+blobs/vzw/vendor/lib/libconfigdb.so|123de28e18432e2ff86acd4a795267a345ff745d
+blobs/vzw/vendor/lib/libdiag.so|6a4a27c39e7f070c6fef29491d3d568f93c118ad
+blobs/vzw/vendor/lib/libdsutils.so|eab9804d929eb64220ae9c56d16a38e6159c9153
+blobs/vzw/vendor/lib/libidl.so|a20e6df153e02c6624c3cf16409755943d6fd5cf
+blobs/vzw/vendor/lib/libqcci_legacy.so|d0bc9f1c7012225af5d2eb2d89d2969fcae42a91
+blobs/vzw/vendor/lib/libqmi.so|bbdea86760d7b97824acaaa0ce9f3aad6547b262
+blobs/vzw/vendor/lib/libqmi_cci.so|69ba187434fa1ca91bb2da76795eccd967f5bc1b
+blobs/vzw/vendor/lib/libqmi_client_qmux.so|8632650b48e0edfee9d39f72a71aa8ad45318552
+blobs/vzw/vendor/lib/libqmi_common_so.so|550d203514dc423bf89e5c1ee0010d00774af6d4
+blobs/vzw/vendor/lib/libqmi_csi.so|97fd8a22b650d15d6cca03c06101a97146913eeb
+blobs/vzw/vendor/lib/libqmi_encdec.so|fe273da9473022dc4418ba7a3ccc80ee4b220aad
+blobs/vzw/vendor/lib/libqmiservices.so|b8f1e18c5b38a8f1d5c08341cc7f23a8449ca231
 
 # Radio
-blobs/vzw/bin/efsks|9fd140e9cff5db97c984a5dd55b748bd7c0e9f9b
-blobs/vzw/bin/ks|949406ae5d1b74034b3828af1905a181e4b69961
-blobs/vzw/bin/qcks|e9f54f3e5b11ef3ce97129f699104e0873c7a905
-blobs/vzw/bin/qmuxd|e257d63996812e2eb23810bda59913f558ee03d2
-blobs/vzw/bin/rfs_access|49a8516ed01b609a9e5079d8135b75db5b024236
-blobs/vzw/bin/rild|0b849cf10cb658e425e871e0d3cf86fe2ccdafd7
-blobs/vzw/bin/rmt_storage|000ddcabfc9416e9a27ba6d04860cc14b6803cdd
-blobs/vzw/lib/libreference-ril.so|2e7b0c7c7c669d74025aae44ae10a2695ff7e781
-blobs/vzw/lib/libril.so|01c537a4ac3c0810f133a71251bfecaf74360eb0
-blobs/vzw/lib/libsec-ril.so|d1784c19ea9257a28af0d110636d00982e5795dc
-blobs/vzw/lib/libsecnativefeature.so|74ae0c6e68f111ce3b29099411a71752e1703d80
-blobs/vzw/lib/libsecril-client.so|3db2a9fd59cfcf25a3d478e4494ba6348642db4e
-blobs/vzw/vendor/lib/libril-qcril-hook-oem.so|6a73ed46f4fbcb283eea5fb44b24a7d14522bfe5
+blobs/vzw/bin/efsks|72bd372fbfe5402f8538bbfd30f1cc838471624a
+blobs/vzw/bin/ks|885d6a2a3ce1dd310460a15e20675d077cd1cec9
+blobs/vzw/bin/qcks|6af80e8c3661db8fa1178a620b082655c4b41ca5
+blobs/vzw/bin/qmuxd|470b0c19e940458ee50292067f9e62730526da46
+blobs/vzw/bin/rfs_access|0a4ffd053f60553a045e42eb57e71555d49c68c7
+blobs/vzw/bin/rild|61ae1c3d6892cd4ef17270739aa4f13010bd9e82
+blobs/vzw/bin/rmt_storage|5feaefb3b0cd8f79559a6244e4a528f256227654
+blobs/vzw/lib/libreference-ril.so|86e1687d831539163f94500eaf8fa0eea9831090
+blobs/vzw/lib/libril.so|5e82e9ca3c045a8cb25405af0ac80964137227c1
+blobs/vzw/lib/libsec-ril.so|8213c7ee8ae86b1474b7f8e779e204c59e0f9595
+blobs/vzw/lib/libsecnativefeature.so|1a0e5993de3f840c15cbfc1a1f2a50834ca8aca9
+blobs/vzw/lib/libsecril-client.so|163ff9912adce4540c7f47942c62d05fcd597fd1
+blobs/vzw/vendor/lib/libril-qcril-hook-oem.so|5aeab2b0216603aefd18c6897b0dd14e952e49e6
