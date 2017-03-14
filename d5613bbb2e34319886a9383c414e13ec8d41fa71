@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba57610f_1d499f8b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2017-03-14T01:13:02Z",
+      "side": 1,
+      "message": "vzw_legacy",
+      "range": {
+        "startLine": 9,
+        "startChar": 11,
+        "endLine": 9,
+        "endChar": 21
+      },
+      "revId": "d5613bbb2e34319886a9383c414e13ec8d41fa71",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
