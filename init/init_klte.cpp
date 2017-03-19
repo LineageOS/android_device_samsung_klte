@@ -50,7 +50,6 @@ void cdma_properties(char const *operator_alpha,
     /* Static CDMA Properties */
     property_set("ril.subscription.types", "NV,RUIM");
     property_set("ro.telephony.default_cdma_sub", "0");
-    property_set("ro.telephony.get_imsi_from_sim", "true");
     property_set("telephony.lteOnCdmaDevice", "1");
 }
 
@@ -89,6 +88,20 @@ void init_target_properties()
         property_set("ro.product.model", "SM-G900M");
         property_set("ro.product.device", "klte");
         gsm_properties();
+    } else if (bootloader.find("G900R4") == 0) {
+        /* klteusc */
+        property_set("ro.build.fingerprint", "samsung/klteusc/klteusc:6.0.1/MMB29M/G900R4VXS2CQB2:user/release-keys");
+        property_set("ro.build.description", "klteusc-user 6.0.1 MMB29M G900R4VXS2CQB2 release-keys");
+        property_set("ro.product.model", "SM-G900R4");
+        property_set("ro.product.device", "klteusc");
+        cdma_properties("U.S. Cellular", "311220", "8");
+    } else if (bootloader.find("G900R7") == 0) {
+        /* klteacg - CSpire variant */
+        property_set("ro.build.fingerprint", "samsung/klteacg/klteacg:6.0.1/MMB29M/G900R7WWU3CPL1:user/release-keys");
+        property_set("ro.build.description", "klteacg-user 6.0.1 MMB29M G900R7WWU3CPL1 release-keys");
+        property_set("ro.product.model", "SM-G900R7");
+        property_set("ro.product.device", "klteacg");
+        cdma_properties("Default", "310000", "8");
     } else if (bootloader.find("G900T") == 0) {
         /* kltetmo */
         property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVS1GQA2:user/release-keys");
@@ -102,6 +115,7 @@ void init_target_properties()
         property_set("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRS2DQB2 release-keys");
         property_set("ro.product.model", "SM-G900V");
         property_set("ro.product.device", "kltevzw");
+        property_set("ro.telephony.get_imsi_from_sim", "true");
         cdma_properties("Verizon", "311480", "10");
     } else if (bootloader.find("G900W8") == 0) {
         /* kltecan */
@@ -116,6 +130,7 @@ void init_target_properties()
         property_set("ro.build.description", "kltetfnvzw-user 4.4.2 KOT49H S902LUDUAOD3 release-keys");
         property_set("ro.product.model", "SM-S902L");
         property_set("ro.product.device", "kltetfnvzw");
+        property_set("ro.telephony.get_imsi_from_sim", "true");
         cdma_properties("TracFone", "310000", "10");
     } else {
         gsm_properties();
