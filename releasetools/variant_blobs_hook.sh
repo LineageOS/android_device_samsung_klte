@@ -16,6 +16,7 @@
 
 
 case $BOOTLOADER in
+  G900R*)      VARIANT="usc" ;;
   G900V*)      VARIANT="vzw" ;;
   *)           VARIANT="gsm" ;;
 esac
