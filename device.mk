@@ -38,6 +38,7 @@ PRODUCT_COPY_FILES += \
 
 # Variant blobs script
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/releasetools/variant_blobs_hook.sh:install/bin/variant_blobs_hook.sh \
     device/samsung/klte-common/releasetools/variant_blobs.sh:install/bin/variant_blobs.sh
 
 # common klte
