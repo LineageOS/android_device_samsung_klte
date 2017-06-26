@@ -69,67 +69,67 @@ void init_target_properties()
 
     if (bootloader.find("G900AZ") == 0) {
         /* klteaio - Cricket MVNO */
-        property_set("ro.build.fingerprint", "samsung/kltetu/klteaio:5.0/LRX21T/G900AZTUS3BQD1:user/release-keys");
-        property_set("ro.build.description", "kltetu-user 5.0 LRX21T G900AZTUS3BQD1 release-keys");
-        property_set("ro.product.model", "SM-G900AZ");
-        property_set("ro.product.device", "klteaio");
+        property_override("ro.build.fingerprint", "samsung/kltetu/klteaio:5.0/LRX21T/G900AZTUS3BQD1:user/release-keys");
+        property_override("ro.build.description", "kltetu-user 5.0 LRX21T G900AZTUS3BQD1 release-keys");
+        property_override("ro.product.model", "SM-G900AZ");
+        property_override("ro.product.device", "klteaio");
         gsm_properties();
     } else if (bootloader.find("G900F") == 0) {
         /* kltexx */
-        property_set("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CQD1:user/release-keys");
-        property_set("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CQD1 release-keys");
-        property_set("ro.product.model", "SM-G900F");
-        property_set("ro.product.device", "klte");
+        property_override("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CQD1:user/release-keys");
+        property_override("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CQD1 release-keys");
+        property_override("ro.product.model", "SM-G900F");
+        property_override("ro.product.device", "klte");
         gsm_properties();
     } else if (bootloader.find("G900M") == 0) {
         /* klteub */
-        property_set("ro.build.fingerprint", "samsung/klteub/klte:6.0.1/MMB29M/G900MUBS1CQD1:user/release-keys");
-        property_set("ro.build.description", "klteub-user 6.0.1 MMB29M G900MUBS1CQD1 release-keys");
-        property_set("ro.product.model", "SM-G900M");
-        property_set("ro.product.device", "klte");
+        property_override("ro.build.fingerprint", "samsung/klteub/klte:6.0.1/MMB29M/G900MUBS1CQD1:user/release-keys");
+        property_override("ro.build.description", "klteub-user 6.0.1 MMB29M G900MUBS1CQD1 release-keys");
+        property_override("ro.product.model", "SM-G900M");
+        property_override("ro.product.device", "klte");
         gsm_properties();
     } else if (bootloader.find("G900R4") == 0) {
         /* klteusc */
-        property_set("ro.build.fingerprint", "samsung/klteusc/klteusc:6.0.1/MMB29M/G900R4VXS2CQC2:user/release-keys");
-        property_set("ro.build.description", "klteusc-user 6.0.1 MMB29M G900R4VXS2CQC2 release-keys");
-        property_set("ro.product.model", "SM-G900R4");
-        property_set("ro.product.device", "klteusc");
+        property_override("ro.build.fingerprint", "samsung/klteusc/klteusc:6.0.1/MMB29M/G900R4VXS2CQC2:user/release-keys");
+        property_override("ro.build.description", "klteusc-user 6.0.1 MMB29M G900R4VXS2CQC2 release-keys");
+        property_override("ro.product.model", "SM-G900R4");
+        property_override("ro.product.device", "klteusc");
         cdma_properties("U.S. Cellular", "311220", "8");
     } else if (bootloader.find("G900R7") == 0) {
         /* klteacg - CSpire variant */
-        property_set("ro.build.fingerprint", "samsung/klteacg/klteacg:6.0.1/MMB29M/G900R7WWU3CPL1:user/release-keys");
-        property_set("ro.build.description", "klteacg-user 6.0.1 MMB29M G900R7WWU3CPL1 release-keys");
-        property_set("ro.product.model", "SM-G900R7");
-        property_set("ro.product.device", "klteacg");
+        property_override("ro.build.fingerprint", "samsung/klteacg/klteacg:6.0.1/MMB29M/G900R7WWU3CPL1:user/release-keys");
+        property_override("ro.build.description", "klteacg-user 6.0.1 MMB29M G900R7WWU3CPL1 release-keys");
+        property_override("ro.product.model", "SM-G900R7");
+        property_override("ro.product.device", "klteacg");
         cdma_properties("Default", "310000", "8");
     } else if (bootloader.find("G900T") == 0) {
         /* kltetmo */
-        property_set("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVU1GQC2:user/release-keys");
-        property_set("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVU1GQC2 release-keys");
-        property_set("ro.product.model", "SM-G900T");
-        property_set("ro.product.device", "kltetmo");
+        property_override("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVU1GQC2:user/release-keys");
+        property_override("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVU1GQC2 release-keys");
+        property_override("ro.product.model", "SM-G900T");
+        property_override("ro.product.device", "kltetmo");
         gsm_properties();
     } else if (bootloader.find("G900V") == 0) {
         /* kltevzw - SM-G900V - Verizon */
-        property_set("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:6.0.1/MMB29M/G900VVRS2DQD1:user/release-keys");
-        property_set("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRS2DQD1 release-keys");
-        property_set("ro.product.model", "SM-G900V");
-        property_set("ro.product.device", "kltevzw");
+        property_override("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:6.0.1/MMB29M/G900VVRS2DQD1:user/release-keys");
+        property_override("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRS2DQD1 release-keys");
+        property_override("ro.product.model", "SM-G900V");
+        property_override("ro.product.device", "kltevzw");
         property_set("ro.telephony.get_imsi_from_sim", "true");
         cdma_properties("Verizon", "311480", "10");
     } else if (bootloader.find("G900W8") == 0) {
         /* kltecan */
-        property_set("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLU1DQB2:user/release-keys");
-        property_set("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLU1DQB2 release-keys");
-        property_set("ro.product.model", "SM-G900W8");
-        property_set("ro.product.device", "kltecan");
+        property_override("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLU1DQB2:user/release-keys");
+        property_override("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLU1DQB2 release-keys");
+        property_override("ro.product.model", "SM-G900W8");
+        property_override("ro.product.device", "kltecan");
         gsm_properties();
     } else if (bootloader.find("S902L") == 0) {
         /* kltetfnvzw - SM-S902L - TracFone Verizon MVNO */
-        property_set("ro.build.fingerprint", "samsung/kltetfnvzw/kltetfnvzw:4.4.2/KOT49H/S902LUDUAOD3:user/release-keys");
-        property_set("ro.build.description", "kltetfnvzw-user 4.4.2 KOT49H S902LUDUAOD3 release-keys");
-        property_set("ro.product.model", "SM-S902L");
-        property_set("ro.product.device", "kltetfnvzw");
+        property_override("ro.build.fingerprint", "samsung/kltetfnvzw/kltetfnvzw:4.4.2/KOT49H/S902LUDUAOD3:user/release-keys");
+        property_override("ro.build.description", "kltetfnvzw-user 4.4.2 KOT49H S902LUDUAOD3 release-keys");
+        property_override("ro.product.model", "SM-S902L");
+        property_override("ro.product.device", "kltetfnvzw");
         property_set("ro.telephony.get_imsi_from_sim", "true");
         cdma_properties("TracFone", "310000", "10");
     } else {
