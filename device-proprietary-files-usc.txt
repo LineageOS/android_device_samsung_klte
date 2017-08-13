@@ -1,19 +1,4 @@
 ## US Cellular Blobs - pinned to G900R4VXU2BOG2_G900R4USC2BOG2_USC versions
-# Qualcomm Framework
-blobs/usc/lib/libmdmdetect.so|9c19d5aacc094597c166529386f83ac721ac1979
-blobs/usc/vendor/lib/libconfigdb.so|2a44cff2eeb00dfea92301b3aa3933f3046ee0b3
-blobs/usc/vendor/lib/libdiag.so|a1d831acfaf7fdd37ce38792423c2381d3a8971e
-blobs/usc/vendor/lib/libdsutils.so|368e3431a51ab0efad3374bcb396cf9f99b0f067
-blobs/usc/vendor/lib/libidl.so|9b871bda84a1204b35b5a93311d666aa36a7f8b8
-blobs/usc/vendor/lib/libqcci_legacy.so|5f0f25a72677d0b3183031490e45b6de26735327
-blobs/usc/vendor/lib/libqmi.so|d120b126ba94cb2d4164243ef7a8516168b6fedf
-blobs/usc/vendor/lib/libqmi_cci.so|ab8a6807aa356f35e11b1cb006ddefc0a9ecc3a1
-blobs/usc/vendor/lib/libqmi_client_qmux.so|79cb7b305bd9f87c581f26c805f4ca2bbdf3a069
-blobs/usc/vendor/lib/libqmi_common_so.so|6c70d0c23898f4d5aa5a962736a06aa3d21e7aa6
-blobs/usc/vendor/lib/libqmi_csi.so|892870ec78fada8558bd3a0e1f5483c03f9ef682
-blobs/usc/vendor/lib/libqmi_encdec.so|82e39ae7e4bb8651d06fdae99fc38e3fb390b62d
-blobs/usc/vendor/lib/libqmiservices.so|0e328c8ed763510f546344f4ee36435b42c6f292
-
 # Radio
 blobs/usc/bin/efsks|8c5c7dfac217951afc438a002eaffd781d5410e5
 blobs/usc/bin/ks|381e47b2ff8a3798eea4153fd66935a40ca801bc

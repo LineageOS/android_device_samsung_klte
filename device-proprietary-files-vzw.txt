@@ -1,19 +1,4 @@
 ## Verizon Blobs - pinned to G900VVRU2BPB1_G900VVZW2BPB1_VZW versions
-# Qualcomm Framework
-blobs/vzw/lib/libmdmdetect.so|9c19d5aacc094597c166529386f83ac721ac1979
-blobs/vzw/vendor/lib/libconfigdb.so|a7eedfbb0ffa070c9239f0d293262e268342da1d
-blobs/vzw/vendor/lib/libdiag.so|9fe0fbec3bce0ee50eaf8fdf95893b834ed6771f
-blobs/vzw/vendor/lib/libdsutils.so|99fac25d6a10ea89a7f66cfc7c3a36478a178568
-blobs/vzw/vendor/lib/libidl.so|9b871bda84a1204b35b5a93311d666aa36a7f8b8
-blobs/vzw/vendor/lib/libqcci_legacy.so|5f0f25a72677d0b3183031490e45b6de26735327
-blobs/vzw/vendor/lib/libqmi.so|d43116e2f8cb79a8baba54952548cc6b93ff3509
-blobs/vzw/vendor/lib/libqmi_cci.so|b94c84c54183e538a7802ca531da7cf2b8176614
-blobs/vzw/vendor/lib/libqmi_client_qmux.so|79cb7b305bd9f87c581f26c805f4ca2bbdf3a069
-blobs/vzw/vendor/lib/libqmi_common_so.so|6c70d0c23898f4d5aa5a962736a06aa3d21e7aa6
-blobs/vzw/vendor/lib/libqmi_csi.so|dee249a1f0fff082b5e5547cfab103ac10ab55e2
-blobs/vzw/vendor/lib/libqmi_encdec.so|82e39ae7e4bb8651d06fdae99fc38e3fb390b62d
-blobs/vzw/vendor/lib/libqmiservices.so|cba7f6925835faca8cd5c21423074142b4083f28
-
 # Radio
 blobs/vzw/bin/efsks|9fd140e9cff5db97c984a5dd55b748bd7c0e9f9b
 blobs/vzw/bin/ks|949406ae5d1b74034b3828af1905a181e4b69961
