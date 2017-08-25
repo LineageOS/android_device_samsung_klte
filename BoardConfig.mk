@@ -19,7 +19,7 @@
 TARGET_OTA_ASSERT_DEVICE := klte,klteacg,klteatt,kltecan,kltelra,kltetmo,klteub,klteusc,kltevzw,kltexx
 
 # Kernel
-TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_eur_defconfig
+TARGET_KERNEL_CONFIG := lineage_klte_pn547_defconfig
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8974
