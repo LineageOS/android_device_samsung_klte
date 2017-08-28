@@ -76,8 +76,8 @@ void init_target_properties()
         gsm_properties();
     } else if (bootloader.find("G900F") == 0) {
         /* kltexx */
-        property_override("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXU1CQE1:user/release-keys");
-        property_override("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXU1CQE1 release-keys");
+        property_override("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CQH1:user/release-keys");
+        property_override("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CQH1 release-keys");
         property_override("ro.product.model", "SM-G900F");
         property_override("ro.product.device", "klte");
         gsm_properties();
