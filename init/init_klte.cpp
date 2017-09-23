@@ -76,8 +76,8 @@ void init_target_properties()
         gsm_properties();
     } else if (bootloader.find("G900F") == 0) {
         /* kltexx */
-        property_override("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CQH1:user/release-keys");
-        property_override("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CQH1 release-keys");
+        property_override("ro.build.fingerprint", "samsung/kltexx/klte:6.0.1/MMB29M/G900FXXS1CQI4:user/release-keys");
+        property_override("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXS1CQI4 release-keys");
         property_override("ro.product.model", "SM-G900F");
         property_override("ro.product.device", "klte");
         gsm_properties();
@@ -111,8 +111,8 @@ void init_target_properties()
         gsm_properties();
     } else if (bootloader.find("G900V") == 0) {
         /* kltevzw - SM-G900V - Verizon */
-        property_override("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:6.0.1/MMB29M/G900VVRU2DQF2:user/release-keys");
-        property_override("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRU2DQF2 release-keys");
+        property_override("ro.build.fingerprint", "Verizon/kltevzw/kltevzw:6.0.1/MMB29M/G900VVRU2DQH2:user/release-keys");
+        property_override("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRU2DQH2 release-keys");
         property_override("ro.product.model", "SM-G900V");
         property_override("ro.product.device", "kltevzw");
         property_set("ro.telephony.get_imsi_from_sim", "true");
