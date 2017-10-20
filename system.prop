@@ -1,4 +1,3 @@
 # Radio
 rild.libargs=-d /dev/smd0
 rild.libpath=/system/lib/libsec-ril.so
-ro.ril.telephony.mqanelements=6
