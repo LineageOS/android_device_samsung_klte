@@ -7,9 +7,6 @@ blobs/usc/bin/qmuxd|02c17830bef1747e7ec244374fd7388eb1477158
 blobs/usc/bin/rfs_access|49a8516ed01b609a9e5079d8135b75db5b024236
 blobs/usc/bin/rild|0b849cf10cb658e425e871e0d3cf86fe2ccdafd7
 blobs/usc/bin/rmt_storage|26401e258b730a6426ecfeaf5ebf89b7d3591e16
-blobs/usc/lib/libreference-ril.so|7c4bbe3d66437b83e0ebccc2ae6c89cb1358c186
 blobs/usc/lib/libril.so|9e555617ce530ceb8b6a5f4243abfaccb303cc5d
 blobs/usc/lib/libsec-ril.so|a5d87993e6a7e600cb493ee99693cf15e358f681
-blobs/usc/lib/libsecnativefeature.so|74ae0c6e68f111ce3b29099411a71752e1703d80
-blobs/usc/lib/libsecril-client.so|3db2a9fd59cfcf25a3d478e4494ba6348642db4e
 blobs/usc/vendor/lib/libril-qcril-hook-oem.so|6a73ed46f4fbcb283eea5fb44b24a7d14522bfe5

@@ -7,9 +7,6 @@ blobs/vzw/bin/qmuxd|e257d63996812e2eb23810bda59913f558ee03d2
 blobs/vzw/bin/rfs_access|49a8516ed01b609a9e5079d8135b75db5b024236
 blobs/vzw/bin/rild|0b849cf10cb658e425e871e0d3cf86fe2ccdafd7
 blobs/vzw/bin/rmt_storage|000ddcabfc9416e9a27ba6d04860cc14b6803cdd
-blobs/vzw/lib/libreference-ril.so|2e7b0c7c7c669d74025aae44ae10a2695ff7e781
 blobs/vzw/lib/libril.so|01c537a4ac3c0810f133a71251bfecaf74360eb0
 blobs/vzw/lib/libsec-ril.so|d1784c19ea9257a28af0d110636d00982e5795dc
-blobs/vzw/lib/libsecnativefeature.so|74ae0c6e68f111ce3b29099411a71752e1703d80
-blobs/vzw/lib/libsecril-client.so|3db2a9fd59cfcf25a3d478e4494ba6348642db4e
 blobs/vzw/vendor/lib/libril-qcril-hook-oem.so|6a73ed46f4fbcb283eea5fb44b24a7d14522bfe5
