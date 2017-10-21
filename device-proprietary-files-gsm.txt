@@ -1,4 +1,3 @@
 ## GSM Blobs - Pinned to G900FXXS1BPCL_G900FOXA1BOJ1_BTU versions
 # Radio
-blobs/gsm/lib/libril.so|aebfbe2448d032c1fb14d3bef41e771d9537c6a2
 blobs/gsm/lib/libsec-ril.so|075570a628f465f92f3067afcefb6938d4e5dc3a

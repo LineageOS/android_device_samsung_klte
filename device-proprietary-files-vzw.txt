@@ -1,4 +1,3 @@
 ## Verizon Blobs - pinned to G900VVRU2BPB1_G900VVZW2BPB1_VZW versions
 # Radio
-blobs/vzw/lib/libril.so|01c537a4ac3c0810f133a71251bfecaf74360eb0
 blobs/vzw/lib/libsec-ril.so|d1784c19ea9257a28af0d110636d00982e5795dc
