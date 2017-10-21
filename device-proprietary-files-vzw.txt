@@ -1,12 +1,4 @@
 ## Verizon Blobs - pinned to G900VVRU2BPB1_G900VVZW2BPB1_VZW versions
 # Radio
-blobs/vzw/bin/efsks|9fd140e9cff5db97c984a5dd55b748bd7c0e9f9b
-blobs/vzw/bin/ks|949406ae5d1b74034b3828af1905a181e4b69961
-blobs/vzw/bin/qcks|e9f54f3e5b11ef3ce97129f699104e0873c7a905
-blobs/vzw/bin/qmuxd|e257d63996812e2eb23810bda59913f558ee03d2
-blobs/vzw/bin/rfs_access|49a8516ed01b609a9e5079d8135b75db5b024236
-blobs/vzw/bin/rild|0b849cf10cb658e425e871e0d3cf86fe2ccdafd7
-blobs/vzw/bin/rmt_storage|000ddcabfc9416e9a27ba6d04860cc14b6803cdd
 blobs/vzw/lib/libril.so|01c537a4ac3c0810f133a71251bfecaf74360eb0
 blobs/vzw/lib/libsec-ril.so|d1784c19ea9257a28af0d110636d00982e5795dc
-blobs/vzw/vendor/lib/libril-qcril-hook-oem.so|6a73ed46f4fbcb283eea5fb44b24a7d14522bfe5

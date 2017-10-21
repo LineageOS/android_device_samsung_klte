@@ -1,12 +1,4 @@
 ## US Cellular Blobs - pinned to G900R4VXU2BOG2_G900R4USC2BOG2_USC versions
 # Radio
-blobs/usc/bin/efsks|8c5c7dfac217951afc438a002eaffd781d5410e5
-blobs/usc/bin/ks|381e47b2ff8a3798eea4153fd66935a40ca801bc
-blobs/usc/bin/qcks|58a3bb337c94e7cb0f26734697fc22e08b050e8e
-blobs/usc/bin/qmuxd|02c17830bef1747e7ec244374fd7388eb1477158
-blobs/usc/bin/rfs_access|49a8516ed01b609a9e5079d8135b75db5b024236
-blobs/usc/bin/rild|0b849cf10cb658e425e871e0d3cf86fe2ccdafd7
-blobs/usc/bin/rmt_storage|26401e258b730a6426ecfeaf5ebf89b7d3591e16
 blobs/usc/lib/libril.so|9e555617ce530ceb8b6a5f4243abfaccb303cc5d
 blobs/usc/lib/libsec-ril.so|a5d87993e6a7e600cb493ee99693cf15e358f681
-blobs/usc/vendor/lib/libril-qcril-hook-oem.so|6a73ed46f4fbcb283eea5fb44b24a7d14522bfe5
