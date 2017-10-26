@@ -35,8 +35,5 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2548039680
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12442369024 # 12442385408 - 16384
 
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/klte-common/releasetools
-
 # inherit from the proprietary version
 -include vendor/samsung/klte/BoardConfigVendor.mk
