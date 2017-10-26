@@ -38,14 +38,25 @@
 
 #include "init_msm8974.h"
 
+void set_rild_libpath(char const *variant)
+{
+    std::string libpath("/system/vendor/lib/libsec-ril.");
+    libpath += variant;
+    libpath += ".so";
+
+    property_override("rild.libpath", libpath.c_str());
+}
+
 void cdma_properties(char const *operator_alpha,
         char const *operator_numeric,
-        char const *default_network)
+        char const *default_network,
+        char const *rild_lib_variant)
 {
     /* Dynamic CDMA Properties */
     property_set("ro.cdma.home.operator.alpha", operator_alpha);
     property_set("ro.cdma.home.operator.numeric", operator_numeric);
     property_set("ro.telephony.default_network", default_network);
+    set_rild_libpath(rild_lib_variant);
 
     /* Static CDMA Properties */
     property_set("ril.subscription.types", "NV,RUIM");
@@ -53,8 +64,10 @@ void cdma_properties(char const *operator_alpha,
     property_set("telephony.lteOnCdmaDevice", "1");
 }
 
-void gsm_properties()
+void gsm_properties(char const *rild_lib_variant="gsm")
 {
+    set_rild_libpath(rild_lib_variant);
+
     property_set("ro.telephony.default_network", "9");
     property_set("telephony.lteOnGsmDevice", "1");
 }
@@ -94,14 +107,14 @@ void init_target_properties()
         property_override("ro.build.description", "klteusc-user 6.0.1 MMB29M G900R4VXS2CQC2 release-keys");
         property_override("ro.product.model", "SM-G900R4");
         property_override("ro.product.device", "klteusc");
-        cdma_properties("U.S. Cellular", "311220", "10");
+        cdma_properties("U.S. Cellular", "311220", "10", "usc");
     } else if (bootloader.find("G900R7") == 0) {
         /* klteacg - CSpire variant */
         property_override("ro.build.fingerprint", "samsung/klteacg/klteacg:6.0.1/MMB29M/G900R7WWU3CPL1:user/release-keys");
         property_override("ro.build.description", "klteacg-user 6.0.1 MMB29M G900R7WWU3CPL1 release-keys");
         property_override("ro.product.model", "SM-G900R7");
         property_override("ro.product.device", "klteacg");
-        cdma_properties("Default", "310000", "10");
+        cdma_properties("Default", "310000", "10", "usc");
     } else if (bootloader.find("G900T") == 0) {
         /* kltetmo */
         property_override("ro.build.fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVU1GQC2:user/release-keys");
@@ -116,7 +129,7 @@ void init_target_properties()
         property_override("ro.product.model", "SM-G900V");
         property_override("ro.product.device", "kltevzw");
         property_set("ro.telephony.get_imsi_from_sim", "true");
-        cdma_properties("Verizon", "311480", "10");
+        cdma_properties("Verizon", "311480", "10", "vzw");
     } else if (bootloader.find("G900W8") == 0) {
         /* kltecan */
         property_override("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLU1DQB2:user/release-keys");
@@ -131,7 +144,7 @@ void init_target_properties()
         property_override("ro.product.model", "SM-S902L");
         property_override("ro.product.device", "kltetfnvzw");
         property_set("ro.telephony.get_imsi_from_sim", "true");
-        cdma_properties("TracFone", "310000", "10");
+        cdma_properties("TracFone", "310000", "10", "vzw");
     } else {
         gsm_properties();
     }
