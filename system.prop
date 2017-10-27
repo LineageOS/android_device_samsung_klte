@@ -1,3 +1,21 @@
 # Radio
 rild.libargs=-d /dev/smd0
 rild.libpath=/system/lib/libsec-ril.so
+
+# VoLTE
+persist.radio.jbims=1
+persist.radio.RATE_ADAPT_ENABLE=1
+persist.radio.VT_ENABLE=1
+persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.VT_USE_MDM_TIME=0
+persist.ims.disableADBLogs=2
+persist.ims.disableDebugLogs=0
+persist.ims.disableIMSLogs=0
+persist.ims.disableQXDMLogs=0
+persist.ims.rcs=false
+persist.ims.volte=false
+persist.ims.vt=false
+persist.ims.vt.epdg=false
+persist.mm.sta.enable=0
+persist.vt.supported=0
+ro.config.hw_volte_on=true
