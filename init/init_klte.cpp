@@ -132,7 +132,7 @@ void init_target_properties()
         property_override("ro.product.model", "SM-G900V");
         property_override("ro.product.device", "kltevzw");
         property_set("ro.telephony.get_imsi_from_sim", "true");
-        cdma_properties("Verizon", "311480", "10", "vzw");
+        cdma_properties("Verizon", "311480", "10", "usc");
     } else if (bootloader.find("G900W8") == 0) {
         /* kltecan */
         property_override("ro.build.fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLU1DQB2:user/release-keys");
@@ -147,7 +147,7 @@ void init_target_properties()
         property_override("ro.product.model", "SM-S902L");
         property_override("ro.product.device", "kltetfnvzw");
         property_set("ro.telephony.get_imsi_from_sim", "true");
-        cdma_properties("TracFone", "310000", "10", "vzw");
+        cdma_properties("TracFone", "310000", "10", "usc");
     } else {
         gsm_properties("gsm");
     }
