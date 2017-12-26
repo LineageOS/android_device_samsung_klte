@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "275392a5_d76205f0",
+        "filename": "init/init_klte.cpp",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2017-12-26T19:37:06Z",
+      "side": 1,
+      "message": "Don\u0027t you want to remove this tab while at it?",
+      "range": {
+        "startLine": 158,
+        "startChar": 0,
+        "endLine": 158,
+        "endChar": 1
+      },
+      "revId": "373fc635b333d143a41397d47e20a9b664aed5b8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
