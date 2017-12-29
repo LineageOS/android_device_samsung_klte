@@ -38,3 +38,4 @@ PRODUCT_COPY_FILES += \
 
 # common klte
 $(call inherit-product, device/samsung/klte-common/klte.mk)
+$(call inherit-product, device/samsung/klte-common/fingerprint-product.mk)

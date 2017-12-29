@@ -14,7 +14,8 @@
 # limitations under the License.
 
 # inherit from common klte
--include device/samsung/klte-common/BoardConfigCommon.mk
+include device/samsung/klte-common/BoardConfigCommon.mk
+include device/samsung/klte-common/fingerprint-board.mk
 
 TARGET_OTA_ASSERT_DEVICE := klte,klteacg,klteatt,kltecan,kltelra,kltetmo,klteub,klteusc,kltevzw,kltexx
 
