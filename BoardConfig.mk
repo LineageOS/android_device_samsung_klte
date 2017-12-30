@@ -32,5 +32,8 @@ TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/klte/init/init_klte.cpp
 BOARD_NFC_CHIPSET := pn547
 BOARD_NFC_HAL_SUFFIX := msm8974
 
+# Radio/RIL
+include $(COMMON_PATH)/radio/single/board.mk
+
 # inherit from the proprietary version
 -include vendor/samsung/klte/BoardConfigVendor.mk
