@@ -35,4 +35,8 @@
     <carrier_config mcc="310" mnc="480">
         <boolean name="disable_cdma_activation_code_bool" value="true" />
     </carrier_config>
+
+    <carrier_config mcc="311" mnc="220">
+        <boolean name="enableMultipartSMS" value="true" />
+    </carrier_config>
 </carrier_config_list>
