@@ -34,5 +34,11 @@ include $(COMMON_PATH)/nfc/pn547/board.mk
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
 
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /system/vendor/lib/libsec-ril.gsm.so|libshim_cutils_atomic.so \
+    /system/vendor/lib/libsec-ril.usc.so|libshim_cutils_atomic.so \
+    /system/vendor/lib/libsec-ril.vzw.so|libshim_cutils_atomic.so
+
 # inherit from the proprietary version
 -include vendor/samsung/klte/BoardConfigVendor.mk
