@@ -22,7 +22,7 @@ LOCAL_C_INCLUDES := \
     device/samsung/msm8974-common/init \
     system/core/base/include \
     system/core/init
-LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
+LOCAL_CFLAGS := -Wall
 LOCAL_SRC_FILES := init_klte.cpp
 LOCAL_MODULE := libinit_klte
 
