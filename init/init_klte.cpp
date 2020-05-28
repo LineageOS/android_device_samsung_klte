@@ -85,6 +85,7 @@ void vendor_load_properties()
     } else if (bootloader.find("G900T") == 0) {
         /* kltetmo */
         property_override("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVU1GQC2 release-keys");
+        property_set("persist.radio.add_power_save", "0");
         set_ro_product_prop("device", "kltetmo");
         set_ro_product_prop("fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVU1GQC2:user/release-keys");
         set_ro_product_prop("model", "SM-G900T");
@@ -102,6 +103,7 @@ void vendor_load_properties()
     } else if (bootloader.find("G900W8") == 0) {
         /* kltecan */
         property_override("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLU1DQB2 release-keys");
+        property_set("persist.radio.add_power_save", "0");
         set_ro_product_prop("device", "kltecan");
         set_ro_product_prop("fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLU1DQB2:user/release-keys");
         set_ro_product_prop("model", "SM-G900W8");
