@@ -87,6 +87,7 @@ void vendor_load_properties()
         property_override("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVU1GQC2 release-keys");
         property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G900T");
         property_override_dual("ro.product.device", "ro.product.vendor.device", "kltetmo");
+        property_set("persist.radio.add_power_save", "0");
         gsm_properties("9", "gsm");
     } else if (bootloader.find("G900V") == 0) {
         /* kltevzw - SM-G900V - Verizon */
@@ -102,6 +103,7 @@ void vendor_load_properties()
         property_override("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLU1DQB2 release-keys");
         property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G900W8");
         property_override_dual("ro.product.device", "ro.product.vendor.device", "kltecan");
+        property_set("persist.radio.add_power_save", "0");
         gsm_properties("9", "gsm");
     } else if (bootloader.find("S902L") == 0) {
         /* kltetfnvzw - SM-S902L - TracFone Verizon MVNO */
