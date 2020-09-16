@@ -31,12 +31,9 @@
 #include <android-base/logging.h>
 #include <android-base/properties.h>
 
-#include "property_service.h"
-
 #include "init_msm8974.h"
 
 using android::base::GetProperty;
-using android::init::property_set;
 
 void vendor_load_properties()
 {
@@ -77,7 +74,7 @@ void vendor_load_properties()
     } else if (bootloader.find("G900T") == 0) {
         /* kltetmo */
         property_override("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVU1GQC2 release-keys");
-        property_set("persist.radio.add_power_save", "0");
+        property_override("persist.radio.add_power_save", "0");
         set_ro_product_prop("device", "kltetmo");
         set_ro_product_prop("fingerprint", "samsung/kltetmo/kltetmo:6.0.1/MMB29M/G900TUVU1GQC2:user/release-keys");
         set_ro_product_prop("model", "SM-G900T");
@@ -86,7 +83,7 @@ void vendor_load_properties()
     } else if (bootloader.find("G900V") == 0) {
         /* kltevzw - SM-G900V - Verizon */
         property_override("ro.build.description", "kltevzw-user 6.0.1 MMB29M G900VVRU2DQL1 release-keys");
-        property_set("ro.telephony.get_imsi_from_sim", "true");
+        property_override("ro.telephony.get_imsi_from_sim", "true");
         set_ro_product_prop("device", "kltevzw");
         set_ro_product_prop("fingerprint", "Verizon/kltevzw/kltevzw:6.0.1/MMB29M/G900VVRU2DQL1:user/release-keys");
         set_ro_product_prop("model", "SM-G900V");
@@ -95,7 +92,7 @@ void vendor_load_properties()
     } else if (bootloader.find("G900W8") == 0) {
         /* kltecan */
         property_override("ro.build.description", "kltevl-user 6.0.1 MMB29M G900W8VLU1DQB2 release-keys");
-        property_set("persist.radio.add_power_save", "0");
+        property_override("persist.radio.add_power_save", "0");
         set_ro_product_prop("device", "kltecan");
         set_ro_product_prop("fingerprint", "samsung/kltevl/kltecan:6.0.1/MMB29M/G900W8VLU1DQB2:user/release-keys");
         set_ro_product_prop("model", "SM-G900W8");
