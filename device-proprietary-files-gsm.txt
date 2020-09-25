@@ -1,3 +1,3 @@
-## GSM Blobs - Pinned to G900FXXS1BPCL_G900FOXA1BOJ1_BTU versions
+## GSM Blobs - Pinned to haxxed G900FXXU1CSA1_G900FVIA1CSC1_VIA
 # Radio
-lib/libsec-ril.so:vendor/lib/libsec-ril.gsm.so|075570a628f465f92f3067afcefb6938d4e5dc3a
+lib/libsec-ril.so:vendor/lib/libsec-ril.gsm.so|2fe2218e8a57d7a491b1e92fb0c3597eed012416

@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,3 +23,13 @@ export DEVICE_COMMON=klte-common
 export VENDOR=samsung
 
 ./../$DEVICE_COMMON/extract-files.sh $@
+
+MY_DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+
+CM_ROOT="$MY_DIR"/../../..
+DEVICE_BLOB_ROOT="$CM_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+
+for f in "$DEVICE_BLOB_ROOT"/vendor/lib/libsec-ril.*; do
+  sed -i 's|libprotobuf-cpp-full|libprotobuf-cpp-haxx|g' "$f"
+done
