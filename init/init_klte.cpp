@@ -42,15 +42,7 @@ void vendor_load_properties()
 {
     std::string bootloader = GetProperty("ro.bootloader", "");
 
-    if (bootloader.find("G900AZ") == 0) {
-        /* klteaio - Cricket MVNO */
-        property_override("ro.build.description", "kltetu-user 5.0 LRX21T G900AZTUS3BQD1 release-keys");
-        set_ro_product_prop("device", "klteaio");
-        set_ro_product_prop("fingerprint", "samsung/kltetu/klteaio:5.0/LRX21T/G900AZTUS3BQD1:user/release-keys");
-        set_ro_product_prop("model", "SM-G900AZ");
-        set_ro_product_prop("name", "klteaio");
-        gsm_properties("9", "gsm");
-    } else if (bootloader.find("G900F") == 0) {
+    if (bootloader.find("G900F") == 0) {
         /* kltexx */
         property_override("ro.build.description", "kltexx-user 6.0.1 MMB29M G900FXXU1CRH1 release-keys");
         set_ro_product_prop("device", "klte");
@@ -109,15 +101,6 @@ void vendor_load_properties()
         set_ro_product_prop("model", "SM-G900W8");
         set_ro_product_prop("name", "kltecan");
         gsm_properties("9", "gsm");
-    } else if (bootloader.find("S902L") == 0) {
-        /* kltetfnvzw - SM-S902L - TracFone Verizon MVNO */
-        property_override("ro.build.description", "kltetfnvzw-user 4.4.2 KOT49H S902LUDUAOD3 release-keys");
-        property_set("ro.telephony.get_imsi_from_sim", "true");
-        set_ro_product_prop("device", "kltetfnvzw");
-        set_ro_product_prop("fingerprint", "samsung/kltetfnvzw/kltetfnvzw:4.4.2/KOT49H/S902LUDUAOD3:user/release-keys");
-        set_ro_product_prop("model", "SM-S902L");
-        set_ro_product_prop("name", "kltetfnvzw");
-        cdma_properties("TracFone", "310000", "0", "10", "vzw");
     } else {
         gsm_properties("9", "gsm");
     }
