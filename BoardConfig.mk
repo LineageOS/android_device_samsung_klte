@@ -16,7 +16,7 @@
 # inherit from common klte
 include device/samsung/klte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := klte,klteacg,klteatt,kltecan,kltelra,kltetmo,klteub,klteusc,kltevzw,kltexx
+TARGET_OTA_ASSERT_DEVICE := klte,klteacg,kltecan,kltetmo,klteub,klteusc,kltevzw,kltexx
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_klte_pn547_defconfig
