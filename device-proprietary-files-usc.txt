@@ -1,3 +1,3 @@
 ## US Cellular Blobs - pinned to haxxed G900R4VXU2CPF2_G900R4USC2CPF2_USC
 # Radio
-lib/libsec-ril.so:vendor/lib/libsec-ril.usc.so|1fdd885d8afb0fc8827bb7e5f3a814fb96038a5d
+lib/libsec-ril.so:vendor/lib/libsec-ril.usc.so|d16113d8fb2d205196c824f108cc63aa3eb8c89e

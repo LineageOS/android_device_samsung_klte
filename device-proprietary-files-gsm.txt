@@ -1,3 +1,3 @@
 ## GSM Blobs - Pinned to haxxed G900FXXU1CSA1_G900FVIA1CSC1_VIA
 # Radio
-lib/libsec-ril.so:vendor/lib/libsec-ril.gsm.so|2fe2218e8a57d7a491b1e92fb0c3597eed012416
+lib/libsec-ril.so:vendor/lib/libsec-ril.gsm.so|85386e9a721ce8aa27a03a791a1600c753d29859
