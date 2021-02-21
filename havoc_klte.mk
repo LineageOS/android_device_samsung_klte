@@ -7,7 +7,7 @@ PRODUCT_DEVICE := klte
 PRODUCT_NAME := havoc_klte
 
 # Official HavocOS
-HAVOC_BUILD_TYPE := Official
+#HAVOC_BUILD_TYPE := Official
 
 # Maintainer Prop
 PRODUCT_PROPERTIES_OVERRIDES += \
