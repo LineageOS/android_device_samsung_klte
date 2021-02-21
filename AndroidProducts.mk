@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_klte.mk
+    $(LOCAL_DIR)/lineage_klte.mk \
     $(LOCAL_DIR)/aicp_klte.mk \
     $(LOCAL_DIR)/aim_klte.mk \
     $(LOCAL_DIR)/aokp_klte.mk \
