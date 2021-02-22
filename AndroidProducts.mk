@@ -23,6 +23,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/bootleg_klte.mk \
     $(LOCAL_DIR)/derp_klte.mk \
     $(LOCAL_DIR)/du_klte.mk \
+    $(LOCAL_DIR)/evolution_klte.mk \
     $(LOCAL_DIR)/havoc_klte.mk \
     $(LOCAL_DIR)/lineage_klte.mk \
     $(LOCAL_DIR)/rr_klte.mk \
@@ -68,6 +69,11 @@ COMMON_LUNCH_CHOICES := \
     du_klte-user \
     du_klte-userdebug \
     du_klte-eng
+
+COMMON_LUNCH_CHOICES := \
+    evolution_klte-user \
+    evolution_klte-userdebug \
+    evolution_klte-eng
 
 COMMON_LUNCH_CHOICES := \
     havoc_klte-user \

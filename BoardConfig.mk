@@ -18,6 +18,8 @@ include device/samsung/klte-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := klte,klteacg,kltecan,kltetmo,klteub,klteusc,kltevzw,kltexx
 
+BUILD_BROKEN_DUP_RULES := true
+
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_klte_pn547_defconfig
 
