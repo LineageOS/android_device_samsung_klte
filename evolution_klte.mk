@@ -9,3 +9,8 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 CUSTOM_BUILD_TYPE := UNOFFICIAL
 TARGET_GAPPS_ARCH := arm
+
+# Maintainer Properties
+EVO_DONATE_URL := https://t.me/cnkzlyr
+EVO_SUPPORT_URL := https://t.me/TeamExyKings_S5
+EVO_MAINTAINER := cnkzlyr (Can KIZILYAR)
