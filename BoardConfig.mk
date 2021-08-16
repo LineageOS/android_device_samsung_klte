@@ -21,7 +21,7 @@ TARGET_OTA_ASSERT_DEVICE := klte,klteacg,kltecan,kltetmo,klteub,klteusc,kltevzw,
 BUILD_BROKEN_DUP_RULES := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineage_klte_pn547_defconfig
+TARGET_KERNEL_CONFIG := moonLight_kernel_defconfig
 
 # Fingerprint
 include $(COMMON_PATH)/fingerprint/board.mk
