@@ -33,6 +33,24 @@
       "message": "\"G900T3\\0\" \u003e \"G900T\\0\"",
       "revId": "ec20f8cdb1622007ed030a950d4dea310085e0cf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "838bba85_fa2b7472",
+        "filename": "init/init_klte.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 31496
+      },
+      "writtenOn": "2024-01-02T04:57:22Z",
+      "side": 1,
+      "message": "I\u0027m slightly confused on what you mean, sorry. Should G900T3 go below G900T? (Wouldn\u0027t it catch the G900T props in that scenario?)",
+      "parentUuid": "e39734eb_19d002a6",
+      "revId": "ec20f8cdb1622007ed030a950d4dea310085e0cf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
