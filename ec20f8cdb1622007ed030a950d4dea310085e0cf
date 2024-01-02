@@ -16,6 +16,23 @@
       "message": "Confirmed on my own G900T3",
       "revId": "ec20f8cdb1622007ed030a950d4dea310085e0cf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e39734eb_19d002a6",
+        "filename": "init/init_klte.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2024-01-02T04:52:50Z",
+      "side": 1,
+      "message": "\"G900T3\\0\" \u003e \"G900T\\0\"",
+      "revId": "ec20f8cdb1622007ed030a950d4dea310085e0cf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
