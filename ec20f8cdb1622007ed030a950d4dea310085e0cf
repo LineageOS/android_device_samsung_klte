@@ -18,6 +18,23 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "839e319e_0fdc750e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2024-01-02T05:02:05Z",
+      "side": 1,
+      "message": "Don\u0027t really see value, esp since this change doesn\u0027t really add anything and the device is gonna be dropped in maybe 2 months, but...",
+      "revId": "ec20f8cdb1622007ed030a950d4dea310085e0cf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "e39734eb_19d002a6",
@@ -49,6 +66,24 @@
       "side": 1,
       "message": "I\u0027m slightly confused on what you mean, sorry. Should G900T3 go below G900T? (Wouldn\u0027t it catch the G900T props in that scenario?)",
       "parentUuid": "e39734eb_19d002a6",
+      "revId": "ec20f8cdb1622007ed030a950d4dea310085e0cf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0e7030a_a60292a5",
+        "filename": "init/init_klte.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2024-01-02T05:02:05Z",
+      "side": 1,
+      "message": "Fuck, you\u0027re right, forgot we were just grabbing initial chars as opposed to matching the string.",
+      "parentUuid": "838bba85_fa2b7472",
       "revId": "ec20f8cdb1622007ed030a950d4dea310085e0cf",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
