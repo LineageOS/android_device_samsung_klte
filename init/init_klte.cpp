@@ -71,6 +71,15 @@ void vendor_load_properties()
         set_ro_product_prop("model", "SM-G900R7");
         set_ro_product_prop("name", "klteacg");
         cdma_properties("Default", "310000", "0", "10", "usc");
+    } else if (bootloader.find("G900T3") == 0) {
+        /* kltetmofrp */
+        property_override("ro.build.description", "kltetmofrp-user 6.0.1 MMB29M G900T3UVU3GQC2 release-keys");
+        property_override("persist.radio.add_power_save", "0");
+        set_ro_product_prop("device", "kltetmo");
+        set_ro_product_prop("fingerprint", "samsung/kltetmofrp/kltetmo:6.0.1/MMB29M/G900T3UVU3GQC2:user/release-keys");
+        set_ro_product_prop("model", "SM-G900T3");
+        set_ro_product_prop("name", "kltetmofrp");
+        gsm_properties("9", "gsm");
     } else if (bootloader.find("G900T") == 0) {
         /* kltetmo */
         property_override("ro.build.description", "kltetmo-user 6.0.1 MMB29M G900TUVU1GQC2 release-keys");
